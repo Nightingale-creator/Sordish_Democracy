@@ -18,10 +18,12 @@ What should we do?
 
 @step_forward
 title: Begin some cooperation with them on a local level.
+on-arrival: cps_party_leader = "Stahler"; cps_relation += 5
 
 Despite our misgivings about the party, it still represents a step forward for the cause of Democracy in Sordland despite our different views.
 
 @not_enough
 title: The Communists should be left on their own.
+on-arrival: cps_party_leader = "Stahler
 
 The Majority of the Party agrees with this decision as though the communists are more Democratic now,they don't share much of our goals.
