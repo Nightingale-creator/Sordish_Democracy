@@ -98,15 +98,15 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.usp_relation = 40;
-Q.cps_relation = 35;
+Q.cps_relation = 25;
 Q.wpb_relation = 60;
 Q.slp_relation = 45;
 // DNVP and NSDAP are invariably hostile
 Q.nfp_relation = 10;
 
-Q.cps_leader = "Stahler";
+Q.cps_leader = "Collective Leadership";
 // alternative is the Conciliators as party leader
-Q.cps_party_leader = "Stahler";
+Q.cps_party_leader = "Collective Leadership";
 Q.z_leader = "Kroos";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Kroos";
