@@ -1,0 +1,38 @@
+title: CPS Party Conference
+subtitle: The Communist Party chooses their new leader...
+view-if: year = 1930 and month = 8 and cps_party_leader = "Stahler"
+max-visits: 1
+tags: event
+new-page: true
+
+= CPS Party Conference
+
+# reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
+
+Ludwig van Kroos, former PFJP chairmam and presidential candidate, has been forced to resign from leadership of the PFJP due to a sex scandal. Now, our party holds a conference to replace him.
+
+The consensus candidate on the right is Frens Richter, a businessman who represents the party's industrialists. On the left, there is Manholy Suheil, a leader of the Social Democrats, who has been more supportive of cooperation with the CPS than most of our Party.Finally there is Dahnal Kronas who lies in the center of our party. 
+
+- @fr: The Denis Stahler retains his position as the party chair.
+- @dk: The Party selects Erwin Lackber as the party chair.
+- @ms: Manholy Suheil is selected as the party chairwoman.
+
+@fr
+subtitle: This decision wont change much 
+on-arrival:cps_relation -= 5;z_party_leader = "Richter"; socdem_dissent += 5;cap_strength +=10; socdem_strength -=5; cap_dissent -=5;slp_relation +=5
+
+Frens Richter has been selected as the chairman of our party. He seems to represent a rightward turn from Kroos, and will preside over a Party less inclined to compromise with the left.Yet he is still a staunch reformist, the left is brooding over this result. 
+
+@dk
+unavailable-subtitle: We do not have good enough relations.
+subtitle: Lackber is more likely to be friendly towards us
+choose-if: cps_relation >= 60
+on-arrival: cps_party_leader = "Lackber"; lib_strength +=10; cap_dissent -=5; socdem_dissent -=5
+
+Our party has continued the path of compromise. Both Left and Right factions have been satisfied as neither gains anything over the other. Stability has been maintained in the party. 
+
+@ms
+subtitle: This might upset the industrialists. 
+on-arrival: z_party_leader = "Suheil"; cps_relation += 5; workers_spd += 3; socdem_strength += 10; socdem_dissent +=10
+
+We have been able to influence the delegates to support Manholy Suheil as the new  chairwoman,and will be more inclined to collaborate with the CPS compared to others in the party. She also increases the appeal of the PFJP to the working class.
