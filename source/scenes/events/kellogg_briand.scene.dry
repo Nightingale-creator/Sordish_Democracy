@@ -8,6 +8,7 @@ tags: event
 #face-image: img/portraits/StresemannGustav.jpg
 
 = Communist Party Reforms
+
 The Communist Party of Sordland has been Reformed to meet the palettes of the Sordish People better has both been reestablished and shifted to a more Reformist Posture.Some within our party being former members have advocated for some cooperation,though others are highly suspicious.
 
 
@@ -18,12 +19,12 @@ What should we do?
 
 @step_forward
 title: Begin some cooperation with them on a local level.
-on-arrival: cps_party_leader = "Stahler"; cps_relation += 5
+on-arrival: cps_party_leader = "Stahler"; cps_relation += 15; cap_dissent += 8;
 
 Despite our misgivings about the party, it still represents a step forward for the cause of Democracy in Sordland despite our different views.
 
 @not_enough
 title: The Communists should be left on their own.
-on-arrival: cps_party_leader = "Stahler"
+on-arrival: cps_party_leader = "Stahler"; cps_relation += 5
 
 The Majority of the Party agrees with this decision as though the communists are more Democratic now,they don't share much of our goals.
