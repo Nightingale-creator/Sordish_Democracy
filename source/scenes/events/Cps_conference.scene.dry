@@ -9,9 +9,8 @@ new-page: true
 
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
-Ludwig van Kroos, former PFJP chairmam and presidential candidate, has been forced to resign from leadership of the PFJP due to a sex scandal. Now, our party holds a conference to replace him.
-
-The consensus candidate on the right is Frens Richter, a businessman who represents the party's industrialists. On the left, there is Manholy Suheil, a leader of the Social Democrats, who has been more supportive of cooperation with the CPS than most of our Party.Finally there is Dahnal Kronas who lies in the center of our party. 
+The newly reformed Communist Party of Sordland now elects its leader.
+The incumbent and interim chairman Denis Stahler is expected to win,however the party may return to their roots if it others are  hostile to it,to represent this Old Guard Gereon Schienheiliger has been chosen.
 
 - @fr: The Denis Stahler retains his position as the party chair.
 - @dk: The Party selects Erwin Lackber as the party chair.
@@ -19,9 +18,9 @@ The consensus candidate on the right is Frens Richter, a businessman who represe
 
 @fr
 subtitle: This decision wont change much 
-on-arrival:cps_relation -= 5;z_party_leader = "Richter"; socdem_dissent += 5;cap_strength +=10; socdem_strength -=5; cap_dissent -=5;slp_relation +=5
+on-arrival: cps_ideology = "Sordish Socialism"; 
 
-Frens Richter has been selected as the chairman of our party. He seems to represent a rightward turn from Kroos, and will preside over a Party less inclined to compromise with the left.Yet he is still a staunch reformist, the left is brooding over this result. 
+Denis Stahler  has been reelected as the chairman of the party. He seems to represent a rightward turn from Kroos, and will preside over a Party less inclined to compromise with the left.Yet he is still a staunch reformist, the left is brooding over this result. 
 
 @dk
 unavailable-subtitle: We do not have good enough relations.
