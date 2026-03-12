@@ -89,7 +89,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #8B0000;">**CPS**</span>: [+ cps_ideology +] ([+ cps_party_leader +])
 
-<span style="color: #954B00;">**NFP**</span>: [+ NFP_ideology +] ([+ nfp_leader +])
+<span style="color: #954B00;">**NFP**</span>: [+ nfp_ideology +] ([+ nfp_leader +])
 
 <span style="color: #D5AC27;">**WPB**</span>: [+ wpb_ideology +] ([+ wpb_leader +])
 
