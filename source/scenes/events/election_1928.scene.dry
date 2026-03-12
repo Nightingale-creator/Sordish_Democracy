@@ -914,7 +914,7 @@ We have won the vote of no confidence, and are currently ruling under an SPD min
 
 @grand_coalition
 title: We can form a Grand Coalition.
-choose-if: usp_relation >= 60; spd_r < 50
+choose-if: usp_relation >= 60 and spd_r < 50
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
 subtitle: PFJP + USP ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
