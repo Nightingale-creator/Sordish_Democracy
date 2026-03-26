@@ -1,4 +1,4 @@
-title: Reichsbanner
+title: Republican Youth Federation 
 new-page: true
 is-card: true
 tags: party_affairs
@@ -10,7 +10,7 @@ max-visits: 6
 
 = Reichsbanner
 
-The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the SPD, Center, and [+ ddp_name +], but by far the largest component is with the SPD.
+The *Republican Youth Federation* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic PFJP and USP Reformists but by far the largest component is with the PFJP.
 
 [? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the SPD is no longer the dominant party among the workers. Many of its members have left. ?]
 
@@ -44,7 +44,7 @@ As we have already funded resources towards the Reichsbanner, we can invest in b
 
 @same
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
+The RYF is already serving the purpose it needs to serve. There is no reason to change what already works.
 
 - @return: Continue...
 
@@ -53,11 +53,11 @@ The Reichsbanner is already serving the purpose it needs to serve. There is no r
 subtitle: +1 resources
 on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2
 
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
+Cutting resources to the RYF causes a drop in the membership, and leads some would-be members to join the Communists instead.
 
 
 @women_rb
-title: Allow women to join the Reichsbanner.
+title: Allow women to join the RYF.
 subtitle: -1 resources - This might cause a backlash from existing members.
 choose-if: resources > 0
 view-if: womens_rights >= 4 and sender_advisor == 1 and iron_front_formed == 1
@@ -66,7 +66,7 @@ go-to: homosexual if trans_rights or repealed_175 or reformed_183
 max-visits: 1
 achievement: women_reichsbanner
 
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and homosexuals ?].
+The suggestion to allow women into the RYF is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and homosexuals ?].
 
 After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
 
