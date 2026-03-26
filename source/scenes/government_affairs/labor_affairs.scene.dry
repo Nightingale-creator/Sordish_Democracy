@@ -26,6 +26,7 @@ Supporting labor is always popular in the social democratic faction, although ma
 @support_employers
 subtitle: Popular among the bourgeoisie, much less so among the workers.
 on-arrival: socdem_dissent += 8; workers_spd -= 3; coalition_dissent -= 1 if coalition_dissent > 0; slp_relation += 5; workers_z += 1; kpd_coalition_dissent += 1; cps_relation -= 8; workers_z += 1; cap_strength += 3;
+
 The more radical workers despise our suppression of their strikes, recalling the days of Soll.
 
 @balance
