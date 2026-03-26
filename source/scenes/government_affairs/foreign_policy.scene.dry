@@ -23,8 +23,6 @@ What should our foreign policy priority be?
 - @expose
 - @european_union
 - @european_union_2
-- @concordat_negotiate
-- @concordat
 - @support_austria
 - @support_austria_2
 - @root: Do not enact any policies for now.
@@ -32,19 +30,19 @@ What should our foreign policy priority be?
 - @cancel_advisor_action
 
 @improve_west
-title: Improve our relations with the Western Allies.
+title: Improve our relations with the Democratic Lespia and by extension the ATO.
 on-arrival: west_relation += 2; reparations_negotiation += 1
 
-The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
+The key to survival in Merkopa is joining a bloc for protection against Rumburg. We are taking steps towards that goal. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
 
 @improve_east
-title: Improve our relations with our eastern neighbors.
+title: Improve our relations with our Brotherly neighbor Agnolia.
 on-arrival: east_relation += 2;
 
 We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
 
 @improve_soviet
-title: Improve our relations with the Soviet Union.
+title: Improve our relations Valgsland and the CSP.
 subtitle: We could also broach the question of the KPD...
 
 The Soviet Union also suffered from the international order created by the Treaty of Versailles; they have been participating in our secret rearmament program. The Treaty of Rapallo in 1922 affirmed our friendly relations.
@@ -144,23 +142,6 @@ The previous foreign ministry, despite its benevolent and peaceful face, was sec
 
 The Allies are grateful of our exposure and repudiation of militarism. Our partners in the coalition are less supportive.
 
-
-@concordat_negotiate
-title: Negotiate a Concordat between the Germany and the Vatican.
-view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
-on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; z_relation += 3*(1-dissent)
-
-The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The Center Party is especially interested in making this agreement.
-
-[? if family_law : Our liberalized divorce policies make it difficult to build relations with the Vatican. ?] [? if abortion : Our legalization of abortion make it difficult to connect with the Church. ?]
-
-@concordat
-title: We can sign a Concordat with the Vatican!
-view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
-on-arrival: reichskonkordat = 1; z_relation += 15*(1-dissent); catholics_spd += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
-achievement: reichskonkordat
-
-We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
 
 @support_austria
 title: Diplomatically support Austrian democracy against the Dollfuß dictatorship.
