@@ -20,6 +20,7 @@ The oil rich region of Narbel is aflame with labor unrest. The employers of Gaso
 @support_labor
 subtitle: Popular among the workers, this will alienate our bourgeoisie voters.
 on-arrival: socdem_strength += 3; socdem_dissent -= 5; workers_spd += 2*(1-dissent); coalition_dissent += 1; slp_relation -= 4; economic_growth -= 0.1; cap_dissent += 8; lib_dissent +=3
+
 Supporting labor is always popular in the social democratic faction, although many of our members represent employers, and they are less enthused.
 
 @support_employers
