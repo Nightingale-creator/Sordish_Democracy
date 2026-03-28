@@ -166,7 +166,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-<span style="color:#24d1f0;">**PFJP**</span>: [+ spd_votes +]%
+{!<span class="tooltip-text" title="<img src='img/pfjp.png' width='24' height='16'> <b style='color:#e63946;'>People's Freedom and Justice Party</b>"><span style="color:#24d1f0;">PFJP</span></span>!}: [+ spd_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
