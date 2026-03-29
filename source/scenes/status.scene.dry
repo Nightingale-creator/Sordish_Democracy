@@ -73,15 +73,15 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-<span style="color: #811aa3;">**USP**</span>: [+ usp_relation : relationships +]
+USP: [+ usp_relation : relationships +]
 
-<span style="color: #D5AC27;">**WPB**</span>: [+ wpb_relation : relationships +]
+WPB: [+ wpb_relation : relationships +]
 
-<span style="color: #8B0000;">**CPS**</span>: [+ cps_relation : relationships +]
+CPS: [+ cps_relation : relationships +]
 
-<span style="color: #954B00;">**NFP**</span>: [+ nfp_relation : relationships +]
+NFP: [+ nfp_relation : relationships +]
 
-<span style="color: #69A2BE;">**SLP**</span>: [+ slp_relation : relationships +]
+SLP: [+ slp_relation : relationships +]
 
 = Party Leadership
 
