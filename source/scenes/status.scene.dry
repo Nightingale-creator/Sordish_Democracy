@@ -193,7 +193,7 @@ Old Middle Class: PFJP: [+ old_middle_spd_display +]%, USP: [+ old_middle_z_disp
 
 Rural: PFJP: [+ rural_spd_display +]%, USP: [+ rural_z_display +]%, CPS: [+ rural_kpd_display +]%, SLP: [+ rural_ddp_display +]%, WPB: [+ rural_dvp_display +]%; NFP: [+ rural_dnvp_display +]%, IND: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]%, CPS: [+ unemployed_kpd_display +]%, SLP: [+ unemployed_ddp_display +]%, WPB: [+ unemployed_dvp_display +]%; NFP: [+ unemployed_dnvp_display +]%, IND: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]%, CPS: [+ unemployed_kpd_display +]%, SLP: [+ unemployed_ddp_display +]%, WPB: [+ unemployed_dvp_display +]%; NFP: [+ unemployed_dnvp_display +]%, PPS: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
 Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, CPS: [+ catholics_kpd_display +]%, SLP: [+ catholics_ddp_display +]%, WPB: [+ catholics_dvp_display +]%; NFP: [+ catholics_dnvp_display +]%, IND: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
