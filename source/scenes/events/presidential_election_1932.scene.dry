@@ -1,5 +1,5 @@
 title: Presidential Election
-subtitle:The USP runs for re-election...
+subtitle:Alphonso runs for re-election...
 view-if: year = 1929 and month = 11 and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
@@ -417,9 +417,9 @@ go-to: hindenburg_wins if hindenburg_plurality == 1; thalmann_wins if thalmann_p
 
 
 @hindenburg_wins
-on-arrival: president = "Hindenburg"
+on-arrival: president = "Alphonso"; pres_party = "USP"
 
-As expected, the incumbent Hindenburg wins the presidency. Let's hope he continues to keep the Nazis out of power.
+As expected, the candidate of the incumbent USP wins the presidency. Let's hope he continues to keep the Nazis out of power.
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
@@ -438,6 +438,6 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @braun_wins
-on-arrival: pres_party = "PFJP"; lib_dissent -= 15; socdem_dissent -= 15; cap_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: pres_party = "PFJP"; lib_dissent -= 5; socdem_dissent -= 5; cap_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
 [+ z_party_leader +] of the PFJP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
