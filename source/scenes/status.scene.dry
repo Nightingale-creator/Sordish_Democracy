@@ -42,7 +42,7 @@ PFJP: [+ spd_r +]%
 # 1928: 15, 1930: 15, 1932: 
 USP: [+ z_r +]%
 # 1928: 10, 1930: 13
-CPS: [+ kpd_r +]%
+PPS: [+ kpd_r +]%
 # 1928: 9, 1930: 5
 WPB: [+ dvp_r +]%
 # 1928: 14, 1930: 7
@@ -185,7 +185,7 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, PPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, CPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
 New Middle Class: PFJP: [+ new_middle_spd_display +]%, USP: [+ new_middle_z_display +]%, CPS: [+ new_middle_kpd_display +]%, SLP: [+ new_middle_ddp_display +]%, WPB: [+ new_middle_dvp_display +]%; NFP: [+ new_middle_dnvp_display +]%, IND: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
