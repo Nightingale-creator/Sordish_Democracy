@@ -24,6 +24,10 @@ const tooltipList = [{
     explanationText: "<img src=img/cps.png> The Communist Party of Sordland,the catch-all Party of the Left to Far Left."
 },              
 
+{
+    searchString: "PPS",
+    explanationText: "<img src=img/pps.png> The People's Party of Sordland,the Reformed Party of the Left."
+},            
       
   {
     searchString: "USP",
@@ -46,6 +50,12 @@ const colourList = [{
     word: "CPS",
         style: "color: #8B0000; font-weight: bold;",
     },
+                                 
+                    {
+    word: "PPS",
+        style: "color: #8B0000; font-weight: bold;",
+    },
+                    
 {
         word: "USP",
         style: "color: #811aa3; font-weight: bold;",
