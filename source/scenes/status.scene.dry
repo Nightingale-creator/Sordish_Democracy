@@ -185,7 +185,7 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, CPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, PPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
 New Middle Class: PFJP: [+ new_middle_spd_display +]%, USP: [+ new_middle_z_display +]%, CPS: [+ new_middle_kpd_display +]%, SLP: [+ new_middle_ddp_display +]%, WPB: [+ new_middle_dvp_display +]%; NFP: [+ new_middle_dnvp_display +]%, IND: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
