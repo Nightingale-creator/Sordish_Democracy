@@ -8,13 +8,14 @@ card-image: img/portraits/SeveringCarl.jpg
 
 = Internal Security
 
-The Interior Ministry controls internal security throughout the German Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
+The Interior Ministry controls internal security throughout the Sordish Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
 
-As with the state police units and the Reichswehr, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
+As with the state police units and the Reichswehr, the internal police tends to be Sollist, and has serious issues with loyalty to a elected PFJP government of the Republic.
 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.
 - @investigate_far_right: Investigate illegal activity among the far right.
+- @investigate_far_left: Investigate illegal activity among the far left.
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @deport_hitler
 - @root: Take no action for now.
@@ -24,7 +25,7 @@ As with the state police units and the Reichswehr, the internal police tends to 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
 
-As with the Prussian state police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known fascists and the like.
+As we have control over the police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known maximists and the like.
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
 
@@ -59,3 +60,8 @@ on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; n
 @investigate_far_right_failure
 
 Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+
+@investigate_far_left
+on-arrival: kpd_workers -= 1*(1-dissent); usp_relation += 3; cps_relation -= 3; kpd_new_middle -= 1*(1-dissent)
+
+We have investigated illegal activity among the Red Youth and the Communists. However we are yet to find anything of note
