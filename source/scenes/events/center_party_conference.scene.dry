@@ -4,6 +4,7 @@ view-if: year = 1928 and month = 12 and z_party_leader = "Kroos"
 max-visits: 1
 tags: event
 new-page: true
+face-image: img/ad.png
 
 = PFJP Party Conference
 
