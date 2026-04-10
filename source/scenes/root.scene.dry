@@ -26,6 +26,15 @@ Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
+// constitutional reforms
+Q.veto_reform = 0;
+Q.decree_reform = 0;
+Q.judge_reform = 0;
+Q.moh_reform = 0;
+Q.term_reform = 0;
+Q.minister_reform = 0;
+Q.impeachment_reform = 0;
+Q.threshold_reform = 0;
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
