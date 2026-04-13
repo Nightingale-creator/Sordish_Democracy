@@ -462,6 +462,11 @@ Q.tariffs = 0;
 
 Q.electoral_threshold = 10;
 
+// reformism
+Q.reform_support = (spd_votes + usp_reform);
+Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
+Q.usp_reform = z_r*(reform_support - spd_r);
+
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
 Q.spd_no_confidence = 0;
@@ -547,11 +552,6 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
-// reformism
-Q.reform_support = (spd_votes + usp_reform);
-Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
-Q.usp_reform = z_r*(reform_support - spd_r);
-
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 0; // Hermann Müller
@@ -594,10 +594,8 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-
 set-bg: img/map_2.jpg
 new-page: true
-
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 
