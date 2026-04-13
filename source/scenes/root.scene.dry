@@ -35,6 +35,10 @@ Q.term_reform = 0;
 Q.minister_reform = 0;
 Q.impeachment_reform = 0;
 Q.threshold_reform = 0;
+// reformism
+Q.reform_support = (spd_votes + usp_reform);
+Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
+Q.usp_reform = z_r*(reform_support - spd_r);
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
@@ -107,7 +111,7 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.usp_relation = 40;
-Q.cps_relation = 25;
+Q.cps_relation = 30;
 Q.wpb_relation = 60;
 Q.slp_relation = 45;
 // DNVP and NSDAP are invariably hostile
