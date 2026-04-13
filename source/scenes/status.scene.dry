@@ -182,6 +182,10 @@ SLP: [+ ddp_votes +]%
 
 Others: [+ other_votes +]%
 
+Support for Reformism: [+ reform_support +]
+USP reform: [+ usp_reform +]
+
+
 **Detailed results for each demographic**
 
 Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, [+ cps_name +]: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
