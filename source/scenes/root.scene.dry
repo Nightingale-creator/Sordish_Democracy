@@ -547,6 +547,10 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
+// reformism
+Q.reform_support = (spd_votes + usp_reform);
+Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
+Q.usp_reform = z_r*(reform_support - spd_r);
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
@@ -590,11 +594,6 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-
-// reformism
-Q.reform_support = (spd_votes + usp_reform);
-Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
-Q.usp_reform = z_r*(reform_support - spd_r);
 
 set-bg: img/map_2.jpg
 new-page: true
