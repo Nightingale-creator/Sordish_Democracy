@@ -463,7 +463,7 @@ Q.tariffs = 0;
 Q.electoral_threshold = 10;
 
 // reformism
-Q.reform_support = (spd_votes + usp_reform);
+Q.reform_support = 59;
 Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
 Q.usp_reform = z_r*(reform_support - spd_r);
 
