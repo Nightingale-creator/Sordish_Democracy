@@ -184,7 +184,8 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
-
+Q.reform_support = 0.59;
+Q.usp_reform = z_votes*reform_support;
 Q.emergency_rule = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
@@ -461,11 +462,6 @@ Q.upper_tax_rates = 0;
 Q.tariffs = 0;
 
 Q.electoral_threshold = 10;
-
-// reformism
-Q.reform_support = 59;
-Q.usp_reform_vote = z_votes*(reform_support - spd_votes);
-Q.usp_reform = z_r*(reform_support - spd_r);
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
