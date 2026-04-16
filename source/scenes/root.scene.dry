@@ -184,9 +184,7 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
-Q.reform_support = 0.59;
-Q.usp_reform = z_votes*reform_support;
-Q.emergency_rule = 0;
+
 
 // minimum percentage of votes to be represented in the Reichstag
 Q.electoral_threshold = 10;
