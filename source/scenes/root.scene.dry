@@ -341,6 +341,11 @@ Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
 
+//reformism
+Q.reform_support = 0.59;
+Q.usp_reform = z_r*reform_support;
+
+Q.emergency_rule = 0;
 
 // State of the government
 Q.president = "Soll";
