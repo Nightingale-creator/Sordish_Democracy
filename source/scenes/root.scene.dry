@@ -341,8 +341,6 @@ Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
 
-//reformism
-Q.usp_reform = 0.35;
 
 Q.emergency_rule = 0;
 
