@@ -10,28 +10,29 @@ new-page: true
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
 The newly reformed Communist Party of Sordland now elects its leader.
-The incumbent and interim chairman Denis Stahler is expected to win,however the party may return to their roots if it others are  hostile to it,to represent this Old Guard Gereon Schienheiliger has been chosen.
+The incumbent and interim chairman Denis Stahler is expected to win,however the party may return to their roots if it others are hostile to it,to represent this Old Guard Gereon Schienheiliger has been chosen. On the other hand a more Reformist Erwin Lackber could be chosen and could represent the colling of the ice with us.
 
 - @fr: The Denis Stahler retains his position as the party chair.
 - @dk: The Party selects Erwin Lackber as the party chair.
-- @ms: Manholy Suheil is selected as the party chairwoman.
+- @ms: Gereon Schienheiliger is selected as the party chairman.
 
 @fr
-subtitle: This decision wont change much 
+subtitle: This is expected by everyone.
 on-arrival: cps_ideology = "Sordish Socialism"; 
 
-Denis Stahler  has been reelected as the chairman of the party. He seems to represent a rightward turn from Kroos, and will preside over a Party less inclined to compromise with the left.Yet he is still a staunch reformist, the left is brooding over this result. 
+As expected Denis Stahler has been reelected as the chairman of the party.This solidifies the new brand of the party as a less Malenyevist force. 
 
 @dk
 unavailable-subtitle: We do not have good enough relations.
 subtitle: Lackber is more likely to be friendly towards us
 choose-if: cps_relation >= 60
-on-arrival: cps_party_leader = "Lackber"; lib_strength +=10; cap_dissent -=5; socdem_dissent -=5
+on-arrival: cps_party_leader = "Lackber"; cps_relation += 10; kpd_rural += 2; cps_ideology = "Reformist Socialism"
 
-Our party has continued the path of compromise. Both Left and Right factions have been satisfied as neither gains anything over the other. Stability has been maintained in the party. 
+Erwin Lackber has been chosen as the party chair. Stability has been maintained in the party. 
 
 @ms
-subtitle: This might upset the industrialists. 
-on-arrival: z_party_leader = "Suheil"; cps_relation += 5; workers_spd += 3; socdem_strength += 10; socdem_dissent +=10
+subtitle: This is unexpected. 
+choose-if: cps_relation <= 35
+on-arrival: cps_party_leader = "Schienheiliger"; cps_relation -= 15; new_middle_kpd -= 3; cps_ideology = "Malenyevism"
 
-We have been able to influence the delegates to support Manholy Suheil as the new  chairwoman,and will be more inclined to collaborate with the CPS compared to others in the party. She also increases the appeal of the PFJP to the working class.
+Gereon has been elected as the Party chair. His election signals a deterioration in relations with us and one that will never compromise with us.
