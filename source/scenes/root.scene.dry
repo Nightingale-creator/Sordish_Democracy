@@ -135,6 +135,8 @@ Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 0;
 
+// USP Reform for constitution
+Q.usp_reform= 0.35;
 
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
