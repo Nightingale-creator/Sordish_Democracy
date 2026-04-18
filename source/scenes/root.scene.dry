@@ -342,8 +342,7 @@ Q.party_support_records = [];
 Q.economic_records = [];
 
 //reformism
-Q.reform_support = 0.59;
-Q.usp_reform = Q.z_votes * Q.reform_support;
+Q.usp_reform = 0.35;
 
 Q.emergency_rule = 0;
 
