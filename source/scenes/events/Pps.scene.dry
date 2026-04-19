@@ -1,0 +1,26 @@
+title: CPS Reformation
+subtitle: The Communist Party of Sordland is becoming the People's Party of Sordland.
+view-if: year = 1931 and month = 2 and cps_party_leader = "Lackber"
+new-page: true
+max-visits: 1
+on-arrival: cps_name = "PPS"; ddp_dstp_seen = 1; new_middle_kpd += 3; old_middle_kpd += 1; worker_kpd += 3
+tags: event
+
+= CPS Reformation
+
+Leaders of the Communist Party, seeing the party's vote share not increasing, have decided that now is the time to reform the party further. The party leader, Erwin Lackber, has engineered a new big tent leftist party, though the communists still remain. Now, the party will be called the People's Party of Sordland, or PPS.
+
+This has led to outcry from the left wing of the party, malyenvists who would rather not work with Left Democrats. [? if ideology = "socdem" Erwin has also expressed interest in forming a Popular Front.?]
+
+- @advantage: We can .
+- @nothing: This is none of our concern.
+
+@advantage
+on-arrival: new_middle_spd += 5; peoples_party_support += 1; left_dissent += 5; reformist_strength += 3; neorevisionist_strength += 3; reformist_dissent -= 2; neorevisionist_dissent -= 2
+
+With turmoil in the DDP, we have an opportunity to recruit middle-class progressives and portions of the liberal intelligensia into our party. The left of the SPD is opposed to this path, seeing it as diluting the class character of the party. On the other hand, revisionists support this course.
+
+
+@nothing
+
+The DDP's internal affairs are none of our concern.
