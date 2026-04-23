@@ -1,20 +1,20 @@
-title: Paul Levi
+title: Frens Ricter
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/LeviPaul.jpg
+card-image: img/Picsart_26-04-23_13-35-06-691.jpg
 view-if: levi_advisor = 1
 new-page: true 
 
-= Paul Levi
+= Frens Ricter
 
-Levi is a former leader of the KPD who left over their devotion to violence and revolutionary adventurism.
+Ricter is a veteran of the PFJP who is a prominent member of the Market Liberal/Capitalist Faction.
 
 - @building_the_left
 - @kpd_cooperation
 - @root: Return to main
 
 @building_the_left
-title: Building the Left
+title: Emergency Fundraising 
 subtitle: Push the SPD to the left.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
