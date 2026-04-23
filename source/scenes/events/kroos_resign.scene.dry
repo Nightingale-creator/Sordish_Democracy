@@ -1,0 +1,12 @@
+title: The Resignation of Ludwig Van Kroos
+view-if: year == 1928 and month >= 6
+frequency: 1000
+max-visits: 1
+on-arrival: n_advisors -= 1 if wels_advisor == 1; wels_advisor = 0
+tags: event
+new-page: true
+face-image: img/images (25).jpg
+
+= The Resignation of Ludwig Van Kroos
+
+Kroos, the leader of our party, has been engulfed in a sex scandal. This has led him to resign as party chair, elections for party chair will be held in 3 months.
