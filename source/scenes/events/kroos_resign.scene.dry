@@ -1,8 +1,8 @@
-5title: The Resignation of Ludwig Van Kroos
+title: The Resignation of Ludwig Van Kroos
 view-if: year == 1928 and month >= 6
 frequency: 1000
 max-visits: 1
-on-arrival: n_advisors -= 1 if wels_advisor == 1; wels_advisor = 0; new_middle_spd -= 5; old_middle_spd -= 5
+on-arrival: n_advisors -= 1 if wels_advisor == 1; wels_advisor = 0; new_middle_spd -= 5; old_middle_spd -= 5; worker_spd -= 3
 tags: event
 new-page: true
 face-image: img/images (25).jpg
