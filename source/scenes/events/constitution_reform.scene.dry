@@ -15,14 +15,15 @@ face-image: img/All_Quiet.jpg
 - @return: Return...
 
 @threshold
-view-if: threshold_reform = 0; 
-on-arrival: threshold_reform += 1; reform_number += 1
+view-if: threshold_reform = 0
+on-arrival: threshold_reform += 1; reform_number += 1;
 go-to: Constitutional_reform
 
 @nothreshold
-view-if: threshold_reform = 1;
-on-arrival: threshold_reform -= 1; reform_number -= 1
+view-if: threshold_reform = 1
+on-arrival: threshold_reform -= 1; reform_number -= 1;
 go-to: Constitutional_reform
+
 
 @end_amendments
 
