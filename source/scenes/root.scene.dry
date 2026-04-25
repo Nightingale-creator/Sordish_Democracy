@@ -35,7 +35,7 @@ Q.term_reform = 0;
 Q.minister_reform = 0;
 Q.impeachment_reform = 0;
 Q.threshold_reform = 0;
-
+Q.reforms_number = 0;
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
