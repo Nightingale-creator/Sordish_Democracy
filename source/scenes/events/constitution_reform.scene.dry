@@ -10,8 +10,6 @@ face-image: img/All_Quiet.jpg
 
 We will now decide our Amendments for the constitution.
 
-@Constitutional_reform
-
 - @threshold: Reduce the electoral threshold to 5%.
 - @nothreshold: Remove the amendment from the threshold.
 - @return: Return...
