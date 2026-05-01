@@ -13,19 +13,24 @@ go-to: constitute
 
 We will now decide our Amendments for the constitution.
 
+
+@constitute_menu
+
 - @threshold: Reduce the electoral threshold to 5%.
 - @nothreshold: Remove the amendment from the threshold.
-- @end_amendments: Finish the draft of the constitution.
 
 @threshold
 view-if: threshold_reform <= 0
 on-arrival: threshold_reform = 1; reform_number += 1;
-go-to: constitute
+go-to: constitute_menu
 
 @nothreshold
 view-if: threshold_reform >= 1
 on-arrival: threshold_reform = 0; reform_number -= 1;
-go-to: constitute
+go-to: constitute_menu
+
+
+- @end_amendments: Finish the draft of the constitution.
 
 @end_amendments
 
