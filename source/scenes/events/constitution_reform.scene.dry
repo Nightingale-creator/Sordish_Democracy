@@ -5,6 +5,9 @@ max-visits: 1
 tags: event
 new-page: true
 face-image: img/All_Quiet.jpg
+go-to:constitute
+
+@constitute
 
 = Constitutional Reforms
 
@@ -17,13 +20,13 @@ We will now decide our Amendments for the constitution.
 @threshold
 view-if: threshold_reform <= 0
 on-arrival: threshold_reform = 1; reform_number += 1;
-go-to: Constitutional_reform
 
 @nothreshold
 view-if: threshold_reform >= 1
 on-arrival: threshold_reform = 0; reform_number -= 1;
-go-to: Constitutional_reform
 
+@return
+go-to:constitute
 
 @end_amendments
 
