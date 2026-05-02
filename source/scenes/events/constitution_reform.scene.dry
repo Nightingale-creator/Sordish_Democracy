@@ -106,12 +106,12 @@ view-if: moh_reform >= 1
 on-arrival: moh_reform = 0; reform_number -= 1;
 go-to: constitute_menu
 
-@impeachment
+@impeach
 view-if: impeachment_reform <= 0
 on-arrival: impeachment_reform = 1; reform_number += 1;
 go-to: constitute_menu
 
-@noimpeachment
+@noimpeach
 view-if: impeachment_reform >= 1
 on-arrival: impeachment_reform = 0; reform_number -= 1;
 go-to: constitute_menu
