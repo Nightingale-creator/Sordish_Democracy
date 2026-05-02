@@ -20,6 +20,20 @@ We will now decide our Amendments for the constitution.
 
 - @threshold: Reduce the electoral threshold to 5%.
 - @nothreshold: Remove the amendment from the threshold.
+- @term: Have the number of terms a president can serve be limited to 3.
+- @noterm: Have the President serve unlimited terms.
+- @veto: The President's Veto can be overriden by a 3/5 majority in the GNA
+- @noveto: Give the president a pocket Veto
+- @minister: Have the appointing of ministers require a confidence vote.
+- @nominister: Ministers require no confidence votes
+- @judge: Remove the Supreme Court's Legislative powers.
+- @nojudge: Keep the Supreme Court's powers.
+- @decree: Have decrees require an enabling act.
+- @nodecree: Keep Decrees as is.
+- @moh: Remove the Member of Honour position.
+- @nomoh: Keep the Member of Honour status.
+- @impeach: Have the impeachment of the President require both the Supreme Court and Assembly 
+- @noimpeach: Keep the current of law of impeachment only requiring the Supreme Court
 - @return: Return...
 
 @threshold
@@ -31,6 +45,77 @@ go-to: constitute_menu
 view-if: threshold_reform >= 1
 on-arrival: threshold_reform = 0; reform_number -= 1;
 go-to: constitute_menu
+
+@term
+view-if: term_reform <= 0
+on-arrival: term_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@noterm
+view-if: term_reform >= 1
+on-arrival: term_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@veto
+view-if: veto_reform <= 0
+on-arrival: veto_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@noveto
+view-if: veto_reform >= 1
+on-arrival: veto_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@minister
+view-if: minister_reform <= 0
+on-arrival: threshold_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@nominister
+view-if: minister_reform >= 1
+on-arrival: minister_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@judge
+view-if: judge_reform <= 0
+on-arrival: judge_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@nojudge
+view-if: judge_reform >= 1
+on-arrival: judge_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@decree
+view-if: decree_reform <= 0
+on-arrival: decree_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@nodecree
+view-if: decree_reform >= 1
+on-arrival: decree_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@moh
+view-if: moh_reform <= 0
+on-arrival: moh_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@nomoh
+view-if: moh_reform >= 1
+on-arrival: moh_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
+@impeachment
+view-if: impeachment_reform <= 0
+on-arrival: impeachment_reform = 1; reform_number += 1;
+go-to: constitute_menu
+
+@noimpeachment
+view-if: impeachment_reform >= 1
+on-arrival: impeachment_reform = 0; reform_number -= 1;
+go-to: constitute_menu
+
 
 @return
 go-to: constitute
