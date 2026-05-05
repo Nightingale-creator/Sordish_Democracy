@@ -32,7 +32,7 @@ on-arrival: usp_party_leader = "Tory"; usp_ideology = "Statist Conservatism"; us
 
 Gloria Tory has been chosen as the party chair. Stability has been maintained in the party. 
 
-@ms
+@lg
 subtitle: This is unexpected. 
 choose-if: usp_relation <= 40
 on-arrival: usp_party_leader = "Graf"; usp_relation -= 15; new_middle_z -= 5; usp_ideology = "Sollism"; old_middle_z -= 5
