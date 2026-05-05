@@ -19,10 +19,10 @@ The incumbent chairman Alphonso is expected to lose, and the party is expected t
 @ea
 unavailable-subtitle: The USP isn't Reformist enough 
 subtitle: This is unexpected...
-choose-if: president = "Alphonso"; usp_reform >= 0.43; usp_relations >= 60;
+choose-if: president = "Alphonso" and usp_reform >= 0.43 and usp_relations >= 60
 on-arrival: usp_ideology = "Arcasian Capitalism"; usp_reform += 0.03; usp_relation += 5; new_middle_z += 5; old_middle_z += 5;
 
-Unexpectedly has been reelected as the chairman of the party.This solidifies the new brand of the party as a less Malenyevist force. 
+Unexpectedly Alphonso has been reelected as the chairman of the party.This solidifies the new brand of the party as a less Sollist force. 
 
 @gt
 unavailable-subtitle: The USP is stuck in their Sollist ways.
