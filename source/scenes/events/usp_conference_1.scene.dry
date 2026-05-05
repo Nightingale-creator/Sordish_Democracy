@@ -1,1 +1,40 @@
+title: USP Party Conference
+subtitle: The United Sordland Party chooses their new leader...
+view-if: year = 1930 and month = 2 and usp_party_leader = "Alphonso"
+max-visits: 1
+tags: event
+new-page: true
 
+= USP Party Conference
+
+# reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
+
+The United Sordland Party now elects its leader.
+The incumbent chairman Alphonso is expected to lose, and the party is expected to once more be led by a conservative or Sollist, the Old Guard candidate is Lileas Graf and is likely to be hostile to us. But the majority of the party is likely to support Gloria Tory who is a moderate in the party. 
+
+- @ea: Ewald Alphonso retains his position as the party chair.
+- @gt: The Party selects Gloria Tory as the party chair.
+- @lg: Lileas Graf is selected as the party chairwoman.
+
+@ea
+unavailable-subtitle: The USP isn't Reformist enough 
+subtitle: This is unexpected...
+choose-if: usp_reform; president = "Alphonso"; usp_reform >= 0.43; usp_relations >= 60;
+on-arrival: usp_ideology = "Arcasian Capitalism"; usp_reform += 0.03; usp_relation += 5; new_middle_z += 5; old_middle_z += 5;
+
+Unexpectedly has been reelected as the chairman of the party.This solidifies the new brand of the party as a less Malenyevist force. 
+
+@gt
+unavailable-subtitle: The USP is stuck in their Sollist ways.
+subtitle: This is the expected outcome.
+choose-if: usp_relation >= 40
+on-arrival: usp_party_leader = "Tory"; usp_ideology = "Statist Conservatism"; usp_reform -= 0.05
+
+Gloria Tory has been chosen as the party chair. Stability has been maintained in the party. 
+
+@ms
+subtitle: This is unexpected. 
+choose-if: usp_relation <= 40
+on-arrival: usp_party_leader = "Graf"; usp_relation -= 15; new_middle_z -= 5; usp_ideology = "Sollism"; old_middle_z -= 5
+
+Lileas Graf has been elected as the Party chair. Her election signals a deterioration in relations with us and one that will never compromise with us.
