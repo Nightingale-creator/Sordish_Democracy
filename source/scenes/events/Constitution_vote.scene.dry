@@ -15,7 +15,7 @@ Blah Blah flavour text.
 - @result: Let us see what destiny has chosen for us..
 
 @result
-go-to: success if ( reforms_number <= 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.33 ) or ( reforms_number <= 5 and reforms_number > 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.37 and usp_relation >= 45 ) or ( reforms_number >= 6 and reforms_number < 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.41 and usp_relation >= 55) or ( reforms_number = 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.45 and usp_relation += 60 ); else fail
+go-to: success if ( reforms_number <= 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.33 ) or ( reforms_number <= 5 and reforms_number > 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.37 and usp_relation >= 45 ) or ( reforms_number >= 6 and reforms_number < 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.41 and usp_relation >= 55) or ( reforms_number = 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.45 and usp_relation >= 60 ) if else fail
 
 
 @success
