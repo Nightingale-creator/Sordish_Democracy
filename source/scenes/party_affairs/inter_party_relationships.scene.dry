@@ -25,23 +25,8 @@ Sometimes to form Government a coalition is necessary with other parties,or perh
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; 
+on-arrival: resources -= 1; usp_relation += 5*(1-dissent); usp_reform += 0.01
 
-
-@USP_op
-on-arrival: usp_relation += 5*(1 - dissent)
-
-We are currently in opposition to the USP-led government, but that does not preclude the general building of feelings of good will.
-
-@USP_coalition
-on-arrival: usp_relation += 6*(1 - dissent)
-
-We are currently coalition partners with them, so improving relations comes naturally.
-
-@center_bruning
-on-arrival: usp_relation += 5*(1 - dissent)
-
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
 
 @CPS
 subtitle: -1 resources
@@ -65,7 +50,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources
 on-arrival: slp_relation += 5*(1 - dissent)
 
-This is a waste of resources.Why are you like this?
+This is a waste of resources. Why are you like this?
 
 @spd_alone
 
