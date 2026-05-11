@@ -27,7 +27,7 @@ if (Q.ideology && Q.ideology != "liberal") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "liberal"; lib_strength += 10; lib_dissent -= 10; cap_dissent -= 5; socdem_dissent -= 5;democratization+=1
+on-departure: ideology = "liberal"; lib_strength += 10; lib_dissent -= 5; usp_reform += 0.01
 
 The Liberals, represented by Kroos and Kronas, support a middle course of Economic Freedom and Social Justice.
 
