@@ -1,1 +1,29 @@
+title: Vote on the New Constitution 
+subtitle: our fate is to be decided here...
+view-if: year = 1931 and month = 8 and spd_in_government = 1
+max-visits: 1
+tags: event
+new-page: true
+go-to: vote
 
+@vote
+
+= Vote on the Constitution of 51'
+
+Blah Blah flavour text.
+
+- @result: Let us see what destiny has chosen for us..
+
+@result
+go-to: success if ( reforms_number <= 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.33 ) or ( reforms_number <= 5 and reforms_number > 3 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.37 and usp_relation >= 45 ) or ( reforms_number >= 6 and reforms_number < 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.41 and usp_relation >= 55) or ( reforms_number = 8 and (usp_reform*z_r) + spd_r > 66 and usp_reform >= 0.45 and usp_relation += 60 ); else fail
+
+
+@success
+on-arrival: pro_republic += 6; spd_new_middle += 3; spd_old_middle += 3; usp_relation += 5; passed = 1; lib_dissent -= 10; socdem_dissent -= 10; cap_dissent -= 10
+
+It is a miracle for the Reformist movement and the PFJP, we have successfully passed the constitution in the Grand National Assembly, now we must fight one last battle to achieve a truly Liberal Democracy in Sordland, that is the Supreme Court.
+
+@fail
+on-arrival: pro_republic -= 10; usp_reform -= 0.10; spd_new_middle -= 10; spd_old_middle -= 10; spd_worker -= 10; wpb_relation -= 10; usp_relation -= 5; cap_dissent += 10; lib_dissent += 15; socdem_dissent += 15
+
+A veil of Misery has fallen over the Reformist movement and the PFJP as a whole. It has appeared our reforms were dead on arrival. Sordish Authoritarian Democracy remains untouched.
