@@ -3,7 +3,6 @@ subtitle: our fate is to be decided here...
 view-if: year = 1931 and month = 8 and spd_in_government = 1
 max-visits: 1
 tags: event
-new-page: true
 go-to: vote
 
 @vote
