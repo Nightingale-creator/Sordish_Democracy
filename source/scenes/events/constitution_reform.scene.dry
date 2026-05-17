@@ -1,6 +1,6 @@
 title: Constitutional Reforms
 subtitle: Our trademark reforms are to be decided now...
-view-if: year = 1931 and month = 3 and spd_in_government = 1
+view-if: year = 1932 and month = 3 and spd_in_government = 1
 max-visits: 1
 tags: event
 face-image: img/All_Quiet.jpg
