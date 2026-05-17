@@ -1,13 +1,13 @@
 title: Vote on the New Constitution 
 subtitle: our fate is to be decided here...
-view-if: year = 1931 and month = 8 and spd_in_government = 1
+view-if: year = 1932 and month = 6 and spd_in_government = 1
 max-visits: 1
 tags: event
 go-to: vote
 
 @vote
 
-= Vote on the Constitution of 51'
+= Vote on the Constitution of 52'
 
 Blah Blah flavour text.
 
@@ -18,7 +18,7 @@ go-to: success if ( reforms_number <= 3 and (usp_reform*z_r) + spd_r > 66 and us
 
 
 @success
-on-arrival: pro_republic += 6; spd_new_middle += 3; spd_old_middle += 3; usp_relation += 5; passed = 1; lib_dissent -= 10; socdem_dissent -= 10; cap_dissent -= 10
+on-arrival: pro_republic += 5; spd_new_middle += 3; spd_old_middle += 3; usp_relation += 5; passed = 1; lib_dissent -= 10; socdem_dissent -= 10; cap_dissent -= 10
 
 It is a miracle for the Reformist movement and the PFJP, we have successfully passed the constitution in the Grand National Assembly, now we must fight one last battle to achieve a truly Liberal Democracy in Sordland, that is the Supreme Court.
 
