@@ -1,0 +1,33 @@
+title: The Supreme Court votes on the Constitutional Amendments passed in the Assembly 
+subtitle: Our Fate is being decided once more
+view-if: year = 1932 and month = 8 and spd_in_government = 1 and passed = 1
+max-visits: 1
+tags: event
+new-page: true
+go-to: scvote
+
+@scvote
+  
+The Supreme Court consists of three factions. The Sollist Old Guard, the Moderate Centrists and those who are aligned with us,the Reformists. Fortunately if we manage to convince the Centrists, We will be able to finally pass our Democratic Reforms.
+
+  - @Result: The die is cast once again.
+
+  @Result
+  go-to: sc_success if pro_republic >= 70; sc_fail if pro_republic < 70
+
+    @sc_success
+    on-arrival: electoral_threshold = 5 if threshold_reform = 1; sc_passed = 1; spd_new_middle += 5; workers_spd += 3; old_middle_spd += 3; usp_reform += 0.02; 
+
+
+    A triumphant victory for Sordish Democracy has been achieved. The long awaited dream of Artor S. Wisci' Democratic Republic has been achieved. The torch of Liberty Shines Brighter than ever, A Morgna Had Coren.
+
+      @sc_fail
+      on-arrival: pro_republic -= 10; usp_reform -= 0.10; spd_new_middle -= 10; spd_old_middle -= 10; spd_worker -= 10; wpb_relation -= 10; usp_relation -= 5; cap_dissent += 10; lib_dissent += 15; socdem_dissent += 15
+
+      The Reactionary Sumpreme Court has struck down our Constitutional Reforms, thus a shadow of despair has fallen upon the PFJP and Reformists in general. May God save Sordland for no one else can.
+        
+      They did not let us sing our songs.
+      They are afraid, afraid of the dawn.
+      They are afraid of hope,
+      but our songs will be sung.
+                               - Bernard Circas
