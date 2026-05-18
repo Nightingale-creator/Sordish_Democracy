@@ -10,7 +10,7 @@ go-to: constitute
 
 = Constitutional Reforms
 
-We will now decide our Amendments for the constitution.
+We will now decide our Amendments for the constitution. We have already agreed that Presidential Vetoes will be limited and the Legislative Powers of the Supreme Court will be removed.
 
 - @constitute_menu: The List of reforms
 - @end_amendments: Finish the draft of the constitution.
@@ -21,12 +21,8 @@ We will now decide our Amendments for the constitution.
 - @nothreshold: Remove the amendment from the threshold.
 - @term: Have the number of terms a president can serve be limited to 3.
 - @noterm: Have the President serve unlimited terms.
-- @veto: The President's Veto can be overriden by a 3/5 majority in the GNA
-- @noveto: Give the president a pocket Veto
 - @minister: Have the appointing of ministers require a confidence vote.
 - @nominister: Ministers require no confidence votes
-- @judge: Remove the Supreme Court's Legislative powers.
-- @nojudge: Keep the Supreme Court's powers.
 - @decree: Have decrees require an enabling act.
 - @nodecree: Keep Decrees as is.
 - @moh: Remove the Member of Honour position.
@@ -55,15 +51,6 @@ view-if: term_reform >= 1
 on-arrival: term_reform = 0; reform_number -= 1;
 go-to: constitute_menu
 
-@veto
-view-if: veto_reform <= 0
-on-arrival: veto_reform = 1; reform_number += 1;
-go-to: constitute_menu
-
-@noveto
-view-if: veto_reform >= 1
-on-arrival: veto_reform = 0; reform_number -= 1;
-go-to: constitute_menu
 
 @minister
 view-if: minister_reform <= 0
@@ -73,16 +60,6 @@ go-to: constitute_menu
 @nominister
 view-if: minister_reform >= 1
 on-arrival: minister_reform = 0; reform_number -= 1;
-go-to: constitute_menu
-
-@judge
-view-if: judge_reform <= 0
-on-arrival: judge_reform = 1; reform_number += 1;
-go-to: constitute_menu
-
-@nojudge
-view-if: judge_reform >= 1
-on-arrival: judge_reform = 0; reform_number -= 1;
 go-to: constitute_menu
 
 @decree
@@ -120,6 +97,6 @@ go-to: constitute_menu
 go-to: constitute
 
 @end_amendments
-on-departure: lib_dissent += 15 if reforms_number >= 3; socdem_dissent += 15 if reforms_number >= 3; cap_dissent += 15 if reforms_number >= 3; usp_relation -= 10 if moh_reform = 1
+on-departure: lib_dissent += 15 if reforms_number >= 4; socdem_dissent += 15 if reforms_number >= 4; cap_dissent += 15 if reforms_number >= 4; usp_relation -= 10 if moh_reform = 1; veto_reform = 1; judge_reform = 1; reform_number += 2
 
-We have finalized the draft for our constitution. [? if reforms_number >= 3: Our party delegates are upset at our watered down reforms ?] [? if moh_reform = 1 : Many USP MPs are not willing to vote to remove the Member of Honor title. ?]
+We have finalized the draft for our constitution. [? if reform_number >= 4: Our party delegates are upset at our watered down reforms ?] [? if moh_reform = 1 : Many USP MPs are not willing to vote to remove the Member of Honor title. ?]
