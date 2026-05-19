@@ -200,6 +200,8 @@ Support for the Reformism: [+ pro_republic_disp +]%
 
 @government
 
+= Current Government 
+
 on-display: {!
 data = [
     {
