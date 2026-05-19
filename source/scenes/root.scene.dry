@@ -38,11 +38,17 @@ Q.threshold_reform = 0;
 Q.reforms_number = 0;
 Q.passed = 0;
 Q.sc_passed = 0;
+
 //economic policy 
 
 Q.cap_policy = 0;
 Q.lib_policy = 0;
 Q.socdem_policy = 0;
+
+// Sumpreme Court
+Q.reform_member = 18.2;
+Q.center_member = 27.3;
+Q.og_member = 54.5;
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
