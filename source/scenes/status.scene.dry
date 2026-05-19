@@ -99,7 +99,6 @@ Economic growth: [+ economic_growth_2 +]%
 = Internal Factions of the PFJP
 
 
-
 Liberal strength: [+ lib_strength : strength +], dissent: [+ lib_dissent : dissent +]
 
 Social Democratic strength: [+ socdem_strength : strength +], dissent: [+ socdem_dissent : dissent +]
@@ -198,3 +197,86 @@ Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]
 Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, [+ cps_name +]: [+ catholics_kpd_display +]%, SLP: [+ catholics_ddp_display +]%, WPB: [+ catholics_dvp_display +]%; NFP: [+ catholics_dnvp_display +]%, IND: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Reformism: [+ pro_republic_disp +]%
+
+@government
+
+on-display: {!
+data = [
+    {
+        "id": "kpd",
+        "legend": "KPD",
+        "name": "CPS",
+        "seats": Math.round(Q.kpd_r*2.5),
+    }
+];
+if (Q.sapd_formed && Q.sapd_r) {
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r*2.5),
+            });
+}
+data = data.concat([
+    {
+        "id": "spd",
+        "legend": "SPD",
+        "name": "PFJP",
+        "seats": Math.round(Q.spd_r*2.5),
+    },
+    {
+        "id": "ddp",
+        "legend": Q.ddp_name,
+        "name": "SLP",
+        "seats": Math.round(Q.ddp_r*2.5),
+    },
+    {
+        "id": "z",
+        "legend": "Center",
+        "name": "USP",
+        "seats": Math.round((Q.z_r)*2.5),
+    },
+    
+    {
+        "id": "dvp",
+        "legend": "DVP",
+        "name": "WPB",
+        "seats": Math.round(Q.dvp_r*2.5),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Independents",
+        "seats": Math.round(Q.other_r*2.5),
+    },
+    {
+        "id": "dnvp",
+        "legend": "DNVP",
+        "name": "NFP",
+        "seats": Math.round(Q.dnvp_r*2.5),
+    },
+    {
+        "id": "nsdap",
+        "legend": "NSDAP",
+        "name": "NFP",
+        "seats": Math.round(Q.nsdap_r*2.5),
+    },
+]);
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
