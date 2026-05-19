@@ -199,9 +199,6 @@ Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, [+
 Support for the Reformism: [+ pro_republic_disp +]%
 
 @government
-
-= Current Government 
-
 on-display: {!
 data = [
     {
@@ -282,3 +279,5 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
+
+= Constitutional Bodies
