@@ -601,15 +601,15 @@ table {
 }
 
 .seat.og {
-    fill: #1a8fa3;
+    fill: #8B0000;
 }
 .seat.membercenter {
-    fill: #24d1f0;
-    stroke: var(--border-color);
-    stroke-width: 1.5px;
+    fill: #D5AC27;
 }
 .seat.reform {
-    fill: #7de8f7;
+    fill: #24d1f0;
+  stroke: var(--border-color);
+    stroke-width: 1.5px;
 }
 
 .tooltip-text {
