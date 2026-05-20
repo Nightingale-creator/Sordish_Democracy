@@ -1,6 +1,6 @@
 title: PFJP Party Conference
 subtitle: Our Party chooses their new leader...
-view-if: year = 1929 and month = 12 and z_party_leader = "Kroos"
+view-if: year = 1929 and month = 9 and z_party_leader = "Kroos"
 max-visits: 1
 tags: event
 new-page: true
