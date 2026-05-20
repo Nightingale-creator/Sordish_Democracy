@@ -75,24 +75,22 @@ var memberdata = [
 ];
 // ====================
 if (window && d3) {
-    var screenWidth = document.getElementById('content').offsetWidth;
-    var totalWidth = Math.min(screenWidth - 50, 700);
-    var chartWidth = Math.floor((totalWidth - 20) / 2);
-    var chartHeight = Math.floor(chartWidth / 2);
+    var width = document.getElementById('status').offsetWidth - 20;
+    var height = Math.round(width / 2);
 
-    document.getElementById('reichstagstatus').style.width  = chartWidth + "px";
-    document.getElementById('reichstagstatus').style.height = chartHeight + "px";
-    document.getElementById('membershipstatus').style.width  = chartWidth + "px";
-    document.getElementById('membershipstatus').style.height = chartHeight + "px";
+    document.getElementById('reichstagstatus').style.width  = width + "px";
+    document.getElementById('reichstagstatus').style.height = height + "px";
+    document.getElementById('membershipstatus').style.width  = width + "px";
+    document.getElementById('membershipstatus').style.height = height + "px";
 
     var parliament = d3.parliament();
-    parliament.width(chartWidth).height(chartHeight).innerRadiusCoef(0.4);
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstagstatus").datum(data).call(parliament);
 // ====================
     var parliament2 = d3.parliament();
-    parliament2.width(chartWidth).height(chartHeight).innerRadiusCoef(0.4);
+    parliament2.width(width).height(height).innerRadiusCoef(0.4);
     parliament2.enter.fromCenter(true).smallToBig(true);
     parliament2.exit.toCenter(false).bigToSmall(true);
     d3.select("#membershipstatus").datum(memberdata).call(parliament2);
@@ -101,9 +99,11 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-{!<div style="display:flex; gap:10px; align-items:flex-end;">
-  <div><div style="text-align:center; font-size:0.85em;">Reichstag Seats</div><svg id="reichstagstatus" style="width:300px; height:150px;"></svg></div>
-  <div><div style="text-align:center; font-size:0.85em;">PFJP Membership</div><svg id="membershipstatus" style="width:300px; height:150px;"></svg></div>
+{!<div style="display:flex; flex-direction:column; gap:4px;">
+  <div style="text-align:center; font-size:0.85em;">Reichstag Seats</div>
+  <svg id="reichstagstatus"></svg>
+  <div style="text-align:center; font-size:0.85em;">PFJP Membership</div>
+  <svg id="membershipstatus"></svg>
 </div>!}
 
 
