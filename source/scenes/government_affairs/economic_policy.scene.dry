@@ -20,7 +20,7 @@ We have already formulated an economic plan. Now we have to implement it.
 choose-if: cap_strength >= 30
 subtitle: The Plan primarily focuses on empowering the private sector
 unavailable-subtitle: The Capitalists do not have enough support.
-on-arrival: cap_policy += 1; eco_policy += 1; economic_growth += 2: inflation += 1; usp_relation += 3; old_middle_spd += 3; socdem_dissent += 8
+on-arrival: cap_policy += 1; eco_policy += 1; economic_growth += 2; inflation += 1; usp_relation += 3; old_middle_spd += 3; socdem_dissent += 8
 
 Many Government owned companies have been privatised, empowering the oligarchs and also easing regulations on businesses.
 
