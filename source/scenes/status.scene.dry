@@ -37,7 +37,6 @@ data = data.concat([
         "name": "USP",
         "seats": Math.round((Q.z_r)*2.5),
     },
-    
     {
         "id": "dvp",
         "legend": "DVP",
@@ -64,28 +63,44 @@ data = data.concat([
     },
 ]);
 
+var rm = (Q.reform_member !== undefined) ? Q.reform_member : 18.2;
+var cm = (Q.center_member !== undefined) ? Q.center_member : 27.3;
+var om = (Q.og_member     !== undefined) ? Q.og_member     : 54.5;
+
+var memberdata = [
+    { "id": "og",          "legend": "Old Guard",  "seats": Math.round(om*2.5) },
+    { "id": "membercenter","legend": "Center",     "seats": Math.round(cm*2.5) },
+    { "id": "reform",      "legend": "Reformists", "seats": Math.round(rm*2.5) },
+];
+
 if (window && d3) {
-    var width = 500; 
-    var height = 500;
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50; 
-        height = width;
-        document.getElementById("reichstagstatus").style.height = screenWidth/2 + "px";
-    } 
+    var width = document.getElementById('qualities').offsetWidth - 20;
+    var height = Math.round(width / 2);
+
+    document.getElementById("reichstagstatus").setAttribute('width', width);
+    document.getElementById("reichstagstatus").setAttribute('height', height);
+    document.getElementById("membershipstatus").setAttribute('width', width);
+    document.getElementById("membershipstatus").setAttribute('height', height);
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstagstatus").datum(data).call(parliament);
+
+    var parliament2 = d3.parliament();
+    parliament2.width(width).height(height).innerRadiusCoef(0.4);
+    parliament2.enter.fromCenter(true).smallToBig(true);
+    parliament2.exit.toCenter(false).bigToSmall(true);
+    d3.select("#membershipstatus").datum(memberdata).call(parliament2);
 }
 !}
 
 = Constitutional Bodies
 
-{!<svg id="reichstagstatus" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
+{!<svg id="membershipstatus" style="display:block;"></svg>!}
 
 # = Public Opinion
 
