@@ -2,7 +2,6 @@ title: Status
 new-page: true
 is-special: true
 on-display: {!
-// ====================
 data = [
     {
         "id": "kpd",
@@ -38,6 +37,7 @@ data = data.concat([
         "name": "USP",
         "seats": Math.round((Q.z_r)*2.5),
     },
+    
     {
         "id": "dvp",
         "legend": "DVP",
@@ -63,32 +63,34 @@ data = data.concat([
         "seats": Math.round(Q.nsdap_r*2.5),
     },
 ]);
-// ====================
+
 var rm = (Q.reform_member !== undefined) ? Q.reform_member : 18.2;
 var cm = (Q.center_member !== undefined) ? Q.center_member : 27.3;
 var om = (Q.og_member     !== undefined) ? Q.og_member     : 54.5;
 
 var memberdata = [
-    { "id": "og",     "legend": "Old Guard",  "seats": Math.round(om*2.5) },
-    { "id": "center", "legend": "Center",     "seats": Math.round(cm*2.5) },
-    { "id": "reform", "legend": "Reformists", "seats": Math.round(rm*2.5) },
+    { "id": "og",          "legend": "Old Guard",  "seats": Math.round(om*2.5) },
+    { "id": "membercenter","legend": "Center",     "seats": Math.round(cm*2.5) },
+    { "id": "reform",      "legend": "Reformists", "seats": Math.round(rm*2.5) },
 ];
-// ====================
-if (window && d3) {
-    var width = document.getElementById('status').offsetWidth - 20;
-    var height = Math.round(width / 2);
 
-    document.getElementById('reichstagstatus').style.width  = width + "px";
-    document.getElementById('reichstagstatus').style.height = height + "px";
-    document.getElementById('membershipstatus').style.width  = width + "px";
-    document.getElementById('membershipstatus').style.height = height + "px";
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstagstatus").style.height = screenWidth/2 + "px";
+        document.getElementById("membershipstatus").style.height = screenWidth/2 + "px";
+    } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstagstatus").datum(data).call(parliament);
-// ====================
+
     var parliament2 = d3.parliament();
     parliament2.width(width).height(height).innerRadiusCoef(0.4);
     parliament2.enter.fromCenter(true).smallToBig(true);
@@ -99,12 +101,9 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-{!<div style="display:flex; flex-direction:column; gap:4px;">
-  <div style="text-align:center; font-size:0.85em;">Reichstag Seats</div>
-  <svg id="reichstagstatus"></svg>
-  <div style="text-align:center; font-size:0.85em;">PFJP Membership</div>
-  <svg id="membershipstatus"></svg>
-</div>!}
+{!<svg id="reichstagstatus" style="width: 200px; height: 100px;"> </svg>!}
+
+{!<svg id="membershipstatus" style="width: 200px; height: 100px;"> </svg>!}
 
 
 # = Public Opinion
