@@ -609,7 +609,7 @@ table {
 .seat.reform {
     fill: #24d1f0;
   stroke: var(--border-color);
-    stroke-width: 1.5px;
+    stroke-width: 3px;
 }
 
 .tooltip-text {
