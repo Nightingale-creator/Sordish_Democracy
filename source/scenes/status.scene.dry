@@ -1,68 +1,89 @@
 title: Status
 new-page: true
 is-special: true
-on-arrival: {!
-if (Q.unemployed) {
-    Q.unemployed_2 = Q.unemployed.toFixed(1);
+on-display: {!
+data = [
+    {
+        "id": "kpd",
+        "legend": "KPD",
+        "name": "CPS",
+        "seats": Math.round(Q.kpd_r*2.5),
+    }
+];
+if (Q.sapd_formed && Q.sapd_r) {
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r*2.5),
+            });
 }
-if (Q.inflation) {
-    Q.inflation_2 = Q.inflation.toFixed(1);
-}
-Q.economic_growth_2 = '0';
-if (Q.economic_growth) {
-    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
+data = data.concat([
+    {
+        "id": "spd",
+        "legend": "SPD",
+        "name": "PFJP",
+        "seats": Math.round(Q.spd_r*2.5),
+    },
+    {
+        "id": "ddp",
+        "legend": Q.ddp_name,
+        "name": "SLP",
+        "seats": Math.round(Q.ddp_r*2.5),
+    },
+    {
+        "id": "z",
+        "legend": "Center",
+        "name": "USP",
+        "seats": Math.round((Q.z_r)*2.5),
+    },
+    
+    {
+        "id": "dvp",
+        "legend": "DVP",
+        "name": "WPB",
+        "seats": Math.round(Q.dvp_r*2.5),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Independents",
+        "seats": Math.round(Q.other_r*2.5),
+    },
+    {
+        "id": "dnvp",
+        "legend": "DNVP",
+        "name": "NFP",
+        "seats": Math.round(Q.dnvp_r*2.5),
+    },
+    {
+        "id": "nsdap",
+        "legend": "NSDAP",
+        "name": "NFP",
+        "seats": Math.round(Q.nsdap_r*2.5),
+    },
+]);
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
 
-= Status
+= Constitutional Bodies
 
-[+ month : month +] [+ year +]
-
-Resources available: [+ resources +]
-
-PFJP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: PFJP majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
-
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
-
-Internal dissent: [+ dissent_percent : dissent +]
-
-= Government
-
-President: [? if pres_party = "PFJP" : [+ z_party_leader +]?]  [? if pres_party = "USP" : [+ president +] ?] ([+ pres_party +])
-
-
-GNA composition:
-
-# 1928: 30, 1930: 25, 1932: 22
-PFJP: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-USP: [+ z_r +]%
-# 1928: 10, 1930: 13
-[+ cps_name +]: [+ kpd_r +]%
-# 1928: 9, 1930: 5
-WPB: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-NFP: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-SLP: [+ ddp_r +]%
-# 1928: 9, 1930: 10
-Independents: [+ other_r +]%
-
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
-
-Next election: [+ next_election_month : month +] [+ next_election_year +]
-
-= Economics
-
-Inflation: [+ inflation_2 +]%
-
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
-
-Economic growth: [+ economic_growth_2 +]%
 
 
 
@@ -199,85 +220,66 @@ Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, [+
 Support for the Reformism: [+ pro_republic_disp +]%
 
 @government
-on-display: {!
-data = [
-    {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "CPS",
-        "seats": Math.round(Q.kpd_r*2.5),
-    }
-];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*2.5),
-            });
+on-arrival: {!
+if (Q.unemployed) {
+    Q.unemployed_2 = Q.unemployed.toFixed(1);
 }
-data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "PFJP",
-        "seats": Math.round(Q.spd_r*2.5),
-    },
-    {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": "SLP",
-        "seats": Math.round(Q.ddp_r*2.5),
-    },
-    {
-        "id": "z",
-        "legend": "Center",
-        "name": "USP",
-        "seats": Math.round((Q.z_r)*2.5),
-    },
-    
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "WPB",
-        "seats": Math.round(Q.dvp_r*2.5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Independents",
-        "seats": Math.round(Q.other_r*2.5),
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "NFP",
-        "seats": Math.round(Q.dnvp_r*2.5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NFP",
-        "seats": Math.round(Q.nsdap_r*2.5),
-    },
-]);
-
-if (window && d3) {
-    var width = 500; 
-    var height = 500;
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50; 
-        height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
-    } 
-
-    var parliament = d3.parliament();
-    parliament.width(width).height(height).innerRadiusCoef(0.4);
-    parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+if (Q.inflation) {
+    Q.inflation_2 = Q.inflation.toFixed(1);
+}
+Q.economic_growth_2 = '0';
+if (Q.economic_growth) {
+    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
 !}
 
-= Constitutional Bodies
+= Status
+
+[+ month : month +] [+ year +]
+
+Resources available: [+ resources +]
+
+PFJP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: PFJP majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+
+[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+
+[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+
+Internal dissent: [+ dissent_percent : dissent +]
+
+= Government
+
+President: [? if pres_party = "PFJP" : [+ z_party_leader +]?]  [? if pres_party = "USP" : [+ president +] ?] ([+ pres_party +])
+
+
+GNA composition:
+
+# 1928: 30, 1930: 25, 1932: 22
+PFJP: [+ spd_r +]%
+[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+# 1928: 15, 1930: 15, 1932: 
+USP: [+ z_r +]%
+# 1928: 10, 1930: 13
+[+ cps_name +]: [+ kpd_r +]%
+# 1928: 9, 1930: 5
+WPB: [+ dvp_r +]%
+# 1928: 14, 1930: 7
+NFP: [+ dnvp_r +]%
+# 1928: 3, 1930: 18
+SLP: [+ ddp_r +]%
+# 1928: 9, 1930: 10
+Independents: [+ other_r +]%
+
+[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+
+Next election: [+ next_election_month : month +] [+ next_election_year +]
+
+= Economics
+
+Inflation: [+ inflation_2 +]%
+
+[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+
+Economic growth: [+ economic_growth_2 +]%
+
