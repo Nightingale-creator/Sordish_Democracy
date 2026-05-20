@@ -20,7 +20,7 @@ We have already formulated an economic plan. Now we have to implement it.
 choose-if: cap_strength >= 30
 subtitle: The Plan primarily focuses on empowering the private sector
 unavailable-subtitle: The Capitalists do not have enough support.
-on-arrival: cap_policy += 1; eco_policy += 1; economic_growth += 2: inflation += 1; usp_relation += 3; spd_old_middle += 3; socdem_dissent += 8
+on-arrival: cap_policy += 1; eco_policy += 1; economic_growth += 2: inflation += 1; usp_relation += 3; old_middle_spd += 3; socdem_dissent += 8
 
 Many Government owned companies have been privatised, empowering the oligarchs and also easing regulations on businesses.
 
@@ -28,7 +28,7 @@ Many Government owned companies have been privatised, empowering the oligarchs a
 choose-if: lib_strength >= 30
 subtitle: A balanced form of privatisation and economic liberalism 
 unavailable-subtitle: The Liberals do not have enough support.
-on-arrival: lib_policy += 1; eco_policy += 1; economic_growth += 3; inflation += 0.5; spd_old_middle += 2; spd_new_middle += 2; socdem_dissent += 3
+on-arrival: lib_policy += 1; eco_policy += 1; economic_growth += 3; inflation += 0.5; old_middle_spd += 2; new_middle_spd += 2; socdem_dissent += 3
 
 The Liberals have taken a cautious approach to privatisation and decentralisation preferring to take their time.
 
@@ -36,7 +36,7 @@ The Liberals have taken a cautious approach to privatisation and decentralisatio
 choose-if: socdem_strength >= 30
 subtitle: Advancement of Worker's rights alongside less government planning.
 unavailable-subtitle: The Social Democrats do not have enough support 
-on-arrival: cap_dissent += 8; spd_workers += 3; lib_dissent += 3; economic_growth += 1.5 ; inflation += 0.75; cps_relation += 3; socdem_policy += 1; eco_policy += 1
+on-arrival: cap_dissent += 8; workers_spd += 3; lib_dissent += 3; economic_growth += 1.5 ; inflation += 0.75; cps_relation += 3; socdem_policy += 1; eco_policy += 1
 
 
 
