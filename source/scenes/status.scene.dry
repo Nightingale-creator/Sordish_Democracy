@@ -68,9 +68,9 @@ var cm = (Q.center_member !== undefined) ? Q.center_member : 27.3;
 var om = (Q.og_member     !== undefined) ? Q.og_member     : 54.5;
 
 var memberdata = [
-    { "id": "og",          "legend": "Old Guard",  "seats": Math.round(om*2.5) },
-    { "id": "membercenter","legend": "Center",     "seats": Math.round(cm*2.5) },
-    { "id": "reform",      "legend": "Reformists", "seats": Math.round(rm*2.5) },
+    { "id": "og",          "legend": "Old Guard",  "seats": Math.round(om*0.11) },
+    { "id": "membercenter","legend": "Center",     "seats": Math.round(cm*0.11) },
+    { "id": "reform",      "legend": "Reformists", "seats": Math.round(rm*0.11) },
 ];
 
 if (window && d3) {
