@@ -44,6 +44,7 @@ Q.sc_passed = 0;
 Q.cap_policy = 0;
 Q.lib_policy = 0;
 Q.socdem_policy = 0;
+Q.eco_policy = 0;
 
 // Sumpreme Court
 Q.reform_member = 18.2;
