@@ -600,6 +600,18 @@ table {
     fill: #C40000;
 }
 
+.seat.og {
+    fill: #1a8fa3;
+}
+.seat.membercenter {
+    fill: #24d1f0;
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+.seat.reform {
+    fill: #7de8f7;
+}
+
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
