@@ -277,7 +277,7 @@ Q.old_middle_kpd = 0;
 Q.old_middle_z = 20;
 Q.old_middle_ddp= 5;
 Q.old_middle_dvp = 0;
-Q.old_middle_dnvp = 15;
+Q.old_middle_dnvp = 10;
 Q.old_middle_nsdap = 0;
 Q.old_middle_other = 10;
 
@@ -657,7 +657,7 @@ audio: shuffle music/SuzerainOSTMainTheme.mp3 music/Suzerain_RiziaOSTByThePeople
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1949
 
 It is a cautiously optimistic time for Sordish democracy. After a period of civil war, civilian rule has returned and the economy is expanding steadily. In foreign policy, Rumburg is a threat that might make genuine peace a fever dream. 
 
