@@ -84,7 +84,7 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 
 # = Public Opinion
