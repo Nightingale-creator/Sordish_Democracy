@@ -10,7 +10,7 @@ go-to: scvote
   
 The Supreme Court consists of three factions. The Sollist Old Guard, the Moderate Centrists and those who are aligned with us,the Reformists. Fortunately if we manage to convince the Centrists, We will be able to finally pass our Democratic Reforms.
 
-- @Result:The die is cast once again.
+- @Result: The die is cast once again.
 
   @Result
   go-to: sc_success if pro_republic >= 70; sc_fail if pro_republic < 70
