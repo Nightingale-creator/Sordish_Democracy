@@ -12,19 +12,18 @@ The Supreme Court consists of three factions. The Sollist Old Guard, the Moderat
 
 - @result: The die is cast once again.
 
-  @result
-  go-to: sc_success if pro_republic >= 70; sc_fail if pro_republic < 70
+@result
+go-to: sc_success if pro_republic >= 70; sc_fail if pro_republic < 70
 
- @sc_success
- on-arrival: electoral_threshold = 5 if threshold_reform = 1; sc_passed = 1; spd_new_middle += 5; workers_spd += 3; old_middle_spd += 3; usp_reform += 0.02; 
+@sc_success
+on-arrival: electoral_threshold = 5 if threshold_reform = 1; sc_passed = 1; spd_new_middle += 5; workers_spd += 3; old_middle_spd += 3; usp_reform += 0.02; 
 
+A triumphant victory for Sordish Democracy has been achieved. The long awaited dream of Artor S. Wisci' Democratic Republic has been achieved. The torch of Liberty Shines Brighter than ever, A Morgna Had Coren.
 
- A triumphant victory for Sordish Democracy has been achieved. The long awaited dream of Artor S. Wisci' Democratic Republic has been achieved. The torch of Liberty Shines Brighter than ever, A Morgna Had Coren.
+@sc_fail
+on-arrival: pro_republic -= 10; usp_reform -= 0.10; spd_new_middle -= 10; spd_old_middle -= 10; spd_worker -= 10; wpb_relation -= 10; usp_relation -= 5; cap_dissent += 10; lib_dissent += 15; socdem_dissent += 15
 
- @sc_fail
- on-arrival: pro_republic -= 10; usp_reform -= 0.10; spd_new_middle -= 10; spd_old_middle -= 10; spd_worker -= 10; wpb_relation -= 10; usp_relation -= 5; cap_dissent += 10; lib_dissent += 15; socdem_dissent += 15
-
-      The Reactionary Sumpreme Court has struck down our Constitutional Reforms, thus a shadow of despair has fallen upon the PFJP and Reformists in general. May God save Sordland for no one else can.
+ The Reactionary Sumpreme Court has struck down our Constitutional Reforms, thus a shadow of despair has fallen upon the PFJP and Reformists in general. May God save Sordland for no one else can.
         
       They did not let us sing our songs.
       They are afraid, afraid of the dawn.
