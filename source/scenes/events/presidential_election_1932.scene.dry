@@ -72,9 +72,9 @@ choose-if: spd_votes >= z_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
 Q.z_support_braun = 0;
-if (Q.z_relation >= 55 || (Q.z_relation > 35 && Q.z_party_leader == "Joos")) {
+if (Q.usp_relation >= 55 || (Q.z_relation > 35 && Q.z_party_leader == "Joos")) {
     Q.z_support_braun = 1;
-} else if (Q.z_relation <= 35) {
+} else if (Q.usp_relation <= 35) {
     Q.z_support_braun = 0;
 } else {
     Q.z_support_braun = 2;
@@ -178,7 +178,7 @@ Q.thalmann_votes = 0;
 // initial phase:
 Q.hitler_votes += Q.nsdap_normalized;
 Q.hindenburg_votes += Q.other_normalized;
-Q.hindenburg_votes += Q.dnvp_normalized;
+Q.hindenburg_votes += (Q.dnvp_normalized*0.5);
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.spd_normalized;
@@ -265,7 +265,7 @@ Alphonso - [+ hindenburg_votes_disp +]%
 
 [+ nsdap_candidate +] - [+ hitler_votes_disp +]%
 
-[? if kpd_support_braun == 0 : Thälmann - [+ thalmann_votes_disp +]% ?]
+[? if kpd_support_braun == 0 : Stahler - [+ thalmann_votes_disp +]% ?]
 
 [? if braun_campaign > 0 : [+ z_party_leader +] - [+ braun_votes_disp +]% ?]
 
