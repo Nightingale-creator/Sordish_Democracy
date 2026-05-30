@@ -40,9 +40,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; braun_campaign = 1
 go-to: braun_campaign
 
-It takes effort to run a campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
-
-The miniscule remnants of the Democratic Party will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
+It takes effort to run a campaign. Now we must convince other parties to support us.
 
 
 @support_thalmann
@@ -157,7 +155,7 @@ go-to: braun_campaign
 Thanks to our good relations, the DVP has promised to support Braun in the election.
 
 @convince_liberals_fail
-on-arrival: dvp_support_braun = 0
+on-arrival: dvp_support_braun = 1
 go-to: braun_campaign
 
 We failed to convince the DVP to support Braun.
@@ -419,7 +417,7 @@ go-to: hindenburg_wins if hindenburg_plurality == 1; thalmann_wins if thalmann_p
 @hindenburg_wins
 on-arrival: president = "Alphonso"; pres_party = "USP"
 
-As expected, the candidate of the incumbent USP wins the presidency. Let's hope he continues to keep the Nazis out of power.
+As expected, the candidate of the incumbent USP wins the presidency. Let's hope he continues to keep the NFP out of power.
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
