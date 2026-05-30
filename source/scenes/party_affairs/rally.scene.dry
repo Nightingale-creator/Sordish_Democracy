@@ -92,9 +92,9 @@ on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfar
 The Social Democratic message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
-on-arrival: democratization += 1; pro_republic += 2*(1-dissent); workers_spd += 2*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
+on-arrival: pro_republic += 3; workers_spd += 1; new_middle_spd += 2; old_middle_spd += 2
 
-Our speakers defend the republican system and advocate for it's Reform rail against the monarchists and authoritarians who threaten it.
+Our speakers defend the republican system and advocate for it's Reform and rail against the monarchists and authoritarians who threaten it.
 
 @cap 
 on-arrival: cap_strength += 5; old_middle_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); rural_spd += 2*(1-dissent); cap_dissent -= 3;
