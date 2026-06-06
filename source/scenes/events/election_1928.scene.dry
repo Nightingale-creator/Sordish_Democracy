@@ -123,7 +123,7 @@ if (Q.kpd_relation >= 30) {
 Q.leverage = Q.spd_r;
 
 Q.grand_coalition_failed = 0;
-// Reset government and ministers... Based on Brüning's 1930 govt
+// Reset government and ministers... Based on Brüning's 1950 govt
 Q.coalition_dissent = 0;
 Q.kpd_coalition_dissent = 0;
 Q.spd_in_government = 0;
@@ -407,7 +407,7 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 title: Far-right coalition
 subtitle: NSDAP + DNVP ([+ far_right_coalition +]%)
 view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
+go-to: far_right_win if (year >= 1952 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1952 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
 priority: 2
 
 There are enough votes for the Nazis and the DNVP to form a coalition. [+ nsdap_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
@@ -531,7 +531,7 @@ title: Refuse to form a government, so that a right-wing coalition may be formed
 subtitle: Z + BVP + DVP + DNVP + Others ([+ right_coalition +]%)
 unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
-choose-if: year < 1929
+choose-if: year < 1949
 
 There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
@@ -552,7 +552,7 @@ go-to: right_coalition_2
 @right_coalition_2
 unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
-choose-if: year < 1929
+choose-if: year < 1949
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "DNVP"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "Z"; agriculture_minister_party = "DNVP"; in_right_coalition = 1;
 
 Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
@@ -1189,7 +1189,7 @@ go-to: no_govt_2
 
 @no_govt_2
 on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_weimar_coalition = 0; in_grand_coalition = 0; chancellor = "Brüning" if chancellor == "Marx"; spd_in_government = 0; grand_coalition_failed = 1
-go-to: right_coalition_post_spd if right_coalition >= 50 and president != "Braun" and year < 1929; new_elections_spd if (right_coalition < 50 or year >= 1929) and president != "Braun"; brauns_dilemma if president == "Braun"
+go-to: right_coalition_post_spd if right_coalition >= 50 and president != "Braun" and year < 1949; new_elections_spd if (right_coalition < 50 or year >= 1949) and president != "Braun"; brauns_dilemma if president == "Braun"
 
 
 @right_coalition_post_spd

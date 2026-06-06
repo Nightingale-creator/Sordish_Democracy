@@ -3,8 +3,8 @@ set-jump: post_election
 
 
 - @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1950: 1950 historical scenario
+- @1952: 1952 (July) historical scenario
 
 @1928
 on-arrival: {!
@@ -79,7 +79,7 @@ Q.catholics_other = 10;
 go-to: election_algorithm
 set-jump: post_election
 
-@1930
+@1950
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -161,7 +161,7 @@ Q.other_r = 5;
 go-to: election_algorithm
 set-jump: post_election
 
-@1932
+@1952
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -283,28 +283,28 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
+# 1928: 30, 1950: 25, 1952: 22
 PFJP: [+ spd_r +]
 
-# 1928: 15, 1930: 15, 1932: 
+# 1928: 15, 1950: 15, 1952: 
 USP: [+ z_r +]
 
-# 1928: 10, 1930: 13
+# 1928: 10, 1950: 13
 CPS: [+ kpd_r +]
 
-# 1928: 5, 1930: 4 (as DstP)
+# 1928: 5, 1950: 4 (as DstP)
 DDP: [+ ddp_r +]
 
-# 1928: 9, 1930: 5
+# 1928: 9, 1950: 5
 WPB: [+ dvp_r +]
 
-# 1928: 14, 1930: 7
+# 1928: 14, 1950: 7
 NFP: [+ dnvp_r +]
 
-# 1928: 3, 1930: 18
+# 1928: 3, 1950: 18
 SLP: [+ nsdap_r +]
 
-# 1928: 9, 1930: 10
+# 1928: 9, 1950: 10
 Other: [+ other_r +]
 
 **Potential coalitions:**

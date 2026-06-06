@@ -1,6 +1,6 @@
 title: USP Party Conference
 subtitle: The United Sordland Party chooses their new leader...
-view-if: year = 1930 and month = 2 and usp_party_leader = "Alphonso"
+view-if: year = 1950 and month = 2 and usp_party_leader = "Alphonso"
 max-visits: 1
 tags: event
 new-page: true

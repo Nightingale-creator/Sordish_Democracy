@@ -1,6 +1,6 @@
 title: The Supreme Court votes on the Constitutional Amendments passed in the Assembly 
 subtitle: Our Fate is being decided once more
-view-if: year = 1932 and month = 8 and spd_in_government = 1 and passed = 1
+view-if: year = 1952 and month = 8 and spd_in_government = 1 and passed = 1
 max-visits: 1
 tags: event
 new-page: true

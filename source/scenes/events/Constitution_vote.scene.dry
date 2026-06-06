@@ -1,6 +1,6 @@
 title: Vote on the New Constitution 
 subtitle: our fate is to be decided here...
-view-if: year = 1932 and month = 6 and spd_in_government = 1
+view-if: year = 1952 and month = 6 and spd_in_government = 1
 max-visits: 1
 tags: event
 go-to: vote

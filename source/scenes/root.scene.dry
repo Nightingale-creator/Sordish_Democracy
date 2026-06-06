@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1929;
+Q.year = 1949;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -240,13 +240,13 @@ Q.rural = 25; // agriculture and forestry employment... but many of those are pr
 Q.unemployed = 9;
 Q.catholics = 10;
 
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
+// unemployment: 1949 - 13.3, 1950 - 22.7, 1951 - 34.3, 1952 - 43.8 (same source as above)
 
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
+// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1951 = 1440 Reichsmarks/year; 1953 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
+// inflation (in %; 1928: 2.9; 1949: 0; 1950: -5%; 1951: -10%; 1952: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
@@ -542,7 +542,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1929;
+Q.next_election_year = 1949;
 Q.next_election_month = 10;
 Q.next_election_time = 10;
 // government affairs timers
@@ -601,14 +601,14 @@ Q.baade_advisor = 0; // Fritz Baade
 // Labor advisors
 Q.leipart_advisor = 0; // Theodor Leipart
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
+Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1950)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
 // Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
+Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1950)
 
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
+Q.leber_advisor = 0; // Julius Leber (post-1950)
+Q.schumacher_advisor = 0; // Kurt Schumacher (post-1950)
 
 // Nonfactional advisors
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld

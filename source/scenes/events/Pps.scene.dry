@@ -1,6 +1,6 @@
 title: CPS Reformation
 subtitle: The Communist Party of Sordland is becoming the People's Party of Sordland.
-view-if: year = 1931 and month = 2 and cps_party_leader = "Lackber"
+view-if: year = 1951 and month = 2 and cps_party_leader = "Lackber"
 new-page: true
 max-visits: 1
 on-arrival: cps_name = "PPS"; ddp_dstp_seen = 1; new_middle_kpd += 3; old_middle_kpd += 1; worker_kpd += 5

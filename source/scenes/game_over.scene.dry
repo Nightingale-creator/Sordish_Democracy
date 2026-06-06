@@ -30,8 +30,8 @@ if (Q.republic_victory) {
 
 // Verfassungskoalition - form a Constitutional Coalition.
 // Wirtschaftspolitik - enact an economic plan.
-// Wirtschaftswunder - reduce unemployment below 10% and have a non-negative budget by 1933.
-if (Q.year >= 1932  && Q.unemployed < 8.6 && Q.budget > 0 && Q.inflation < 5) {
+// Wirtschaftswunder - reduce unemployment below 10% and have a non-negative budget by 1953.
+if (Q.year >= 1952  && Q.unemployed < 8.6 && Q.budget > 0 && Q.inflation < 5) {
     this.achieve('wirtschaftswunder');
 }
 // Bollwerk der Demokratie - resist the Prussian Coup, and win.
@@ -248,7 +248,7 @@ Our government has enacted a public works program!
 
 @unemployment_reduced
 title: Unemployment has been reduced from its peak.
-view-if: unemployed <= 20 and unemployed >= 10 and year >= 1930
+view-if: unemployed <= 20 and unemployed >= 10 and year >= 1950
 tags: endings
 go-to: eg_menu
 
@@ -256,7 +256,7 @@ While still uncomfortably high, unemployment levels are nowhere near their peak.
 
 @unemployment_reduced_2
 title: Unemployment has been successfully reduced!
-view-if: unemployed < 10 and year >= 1930
+view-if: unemployed < 10 and year >= 1950
 tags: endings
 go-to: eg_menu
 
@@ -370,7 +370,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
 
-[? if game_achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if game_achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1952, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
 
 [? if game_achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
 
@@ -479,7 +479,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
 
-[? if achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1952, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
 
 [? if achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
 
@@ -586,7 +586,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
 
-[? if not achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if not achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1952, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
 
 [? if not achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
 

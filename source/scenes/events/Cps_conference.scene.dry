@@ -1,6 +1,6 @@
 title: CPS Party Conference
 subtitle: The Communist Party chooses their new leader...
-view-if: year = 1930 and month = 8 and cps_party_leader = "Stahler"
+view-if: year = 1950 and month = 8 and cps_party_leader = "Stahler"
 max-visits: 1
 tags: event
 

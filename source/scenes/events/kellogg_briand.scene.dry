@@ -1,7 +1,7 @@
 title: Communist Reformation 
 new-page: true
 subtitle: Communist Pragmatism?
-view-if: year = 1930 and month = 4
+view-if: year = 1950 and month = 4
 max-visits: 1
 on-arrival: kellogg_briand_seen = 1; kellogg_briand_signed = 1 if foreign_minister_party = "DVP"
 tags: event
