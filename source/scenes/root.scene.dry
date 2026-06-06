@@ -627,13 +627,13 @@ This is a game of alternate history set in the world of the game Suzerain. While
 
 Before starting i would like to give credit to Autumn Chen and the Creators of Suzerain, it is thanks to them that this project is even possible. Then we have those in the Red Autumn Discord for helping in the development of this mod. And also a thanks to those within the Suzerain LARP community. I hope all of you enjoy the Mod.
 
-- @1928_easy: Begin (easy difficulty)
+- @1928_easy: Begin (recommended difficulty)
 - @1928_main: Begin (normal difficulty)
 - @1928_hard: Begin (hard difficulty)
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 2;
 go-to: 1928_main
 
 @1928_hard
