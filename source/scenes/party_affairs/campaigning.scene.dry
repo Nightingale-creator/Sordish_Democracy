@@ -1,9 +1,9 @@
 title: Campaigning
 new-page: true
 on-arrival: month_actions += 1
-max-visits: 36
+max-visits: 40
 is-card: true
-card-image: img/flags.jpg
+card-image: img/cards/sordad.jpg
 frequency: 100
 tags: party_affairs
 
