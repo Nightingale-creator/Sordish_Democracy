@@ -98,7 +98,7 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" && z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 50%; height: 200px;"> ?] [? if pres_party == "PFJP" && z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 50%; height: 200px;"> ?][? if pres_party == "PFJP" && z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 50%; height: 200px;"> ?]</div>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 50%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 50%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 50%; height: 200px;"> ?]</div>
 
 {!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
