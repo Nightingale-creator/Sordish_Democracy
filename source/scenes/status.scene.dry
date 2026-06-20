@@ -3,6 +3,78 @@ new-page: true
 is-special: true
 on-display: {!
 data = [
+
+const svg = document.getElementById("pieChart");
+
+function polarToCartesian(cx, cy, r, angle) {
+    const rad = (angle - 90) * Math.PI / 180;
+    return {
+        x: cx + r * Math.cos(rad),
+        y: cy + r * Math.sin(rad)
+    };
+}
+
+function drawSlice(cx, cy, r, startAngle, endAngle, color) {
+    const start = polarToCartesian(cx, cy, r, startAngle);
+    const end = polarToCartesian(cx, cy, r, endAngle);
+
+    const largeArcFlag = (endAngle - startAngle) > 180 ? 1 : 0;
+
+    return `
+        <path
+            d="
+                M ${cx} ${cy}
+                L ${start.x} ${start.y}
+                A ${r} ${r} 0 ${largeArcFlag} 1 ${end.x} ${end.y}
+                Z
+            "
+            fill="${color}"
+            stroke="#222"
+            stroke-width="2"
+        />
+    `;
+}
+
+function renderPie() {
+    const data = [
+        { value: Q.spd_votes,   color: "#24d1f0" }, // SPD
+        { value: Q.z_votes,   color: "#811aa3" }, // CDU
+        { value: Q.ddp_votes,   color: "#69A2BE" }, // FDP
+        { value: Q.dnvp_votes, color: "#954B00" }, // Greens
+        { value: Q.dvp_votes, color: "#D5AC27" }
+        { value: Q.kpd_votes, color: "#8B0000" }
+
+    ];
+
+    const total = data.reduce((sum, p) => sum + p.value, 0);
+
+    let currentAngle = 0;
+    let html = "";
+
+    for (const party of data) {
+        const angle = (party.value / total) * 360;
+
+        html += drawSlice(
+            150,
+            150,
+            140,
+            currentAngle,
+            currentAngle + angle,
+            party.color
+        );
+
+        currentAngle += angle;
+    }
+
+    svg.innerHTML = html;
+}
+
+// Draw once
+renderPie();
+
+// Update automatically every second
+setInterval(renderPie, 1000);
+
     {
         "id": "kpd",
         "legend": "KPD",
@@ -98,7 +170,8 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?] </div> <svg id="pieChart" viewBox="0 0 300 300" width="300" height="300"></svg>
+
 
 {!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
