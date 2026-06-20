@@ -1,8 +1,8 @@
 title: Status
 new-page: true
 is-special: true
-on-display: {!
-data = [
+on-arrival: {! 
+ <svg id="pieChart" viewBox="0 0 300 300" width="300" height="300"></svg>
 
 const svg = document.getElementById("pieChart");
 
@@ -74,6 +74,10 @@ renderPie();
 
 // Update automatically every second
 setInterval(renderPie, 1000);
+
+!}
+on-display: {!
+data = [
 
     {
         "id": "kpd",
@@ -170,8 +174,7 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?] </div> <svg id="pieChart" viewBox="0 0 300 300" width="300" height="300"></svg>
-
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div> 
 
 {!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
