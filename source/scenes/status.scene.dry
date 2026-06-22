@@ -76,7 +76,7 @@ renderPie();
 setInterval(renderPie, 1000);
 
 !}
-on-display: {!
+
 data = [
 
     {
@@ -170,7 +170,7 @@ if (window && d3) {
     parliament2.exit.toCenter(false).bigToSmall(true);
     d3.select("#membershipstatus").datum(memberdata).call(parliament2);
 }
-!}
+
 
 = Constitutional Bodies
 
