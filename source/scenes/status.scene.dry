@@ -197,103 +197,63 @@ Support for the Reformism: [+ pro_republic_disp +]%
 @government
 on-arrival:{! 
 data = [
-    {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "CPS",
-        "seats": Math.round(Q.kpd_r*2.5),
-    }
+    { "id": "kpd", "legend": "KPD", "name": "CPS", "seats": Math.round(Q.kpd_r*2.5) }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*2.5),
-            });
+    data.push({ "id": "sapd", "legend": "SAPD", "name": "SAPD", "seats": Math.round(Q.sapd_r*2.5) });
 }
 data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "PFJP",
-        "seats": Math.round(Q.spd_r*2.5),
-    },
-    {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": "SLP",
-        "seats": Math.round(Q.ddp_r*2.5),
-    },
-    {
-        "id": "z",
-        "legend": "Center",
-        "name": "USP",
-        "seats": Math.round((Q.z_r)*2.5),
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "WPB",
-        "seats": Math.round(Q.dvp_r*2.5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Independents",
-        "seats": Math.round(Q.other_r*2.5),
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "NFP",
-        "seats": Math.round(Q.dnvp_r*2.5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NFP",
-        "seats": Math.round(Q.nsdap_r*2.5),
-    },
+    { "id": "spd",  "legend": "SPD",        "name": "PFJP", "seats": Math.round(Q.spd_r*2.5) },
+    { "id": "ddp",  "legend": Q.ddp_name,   "name": "SLP",  "seats": Math.round(Q.ddp_r*2.5) },
+    { "id": "z",    "legend": "Center",      "name": "USP",  "seats": Math.round((Q.z_r)*2.5) },
+    { "id": "dvp",  "legend": "DVP",         "name": "WPB",  "seats": Math.round(Q.dvp_r*2.5) },
+    { "id": "other","legend": "Other",       "name": "Independents", "seats": Math.round(Q.other_r*2.5) },
+    { "id": "dnvp", "legend": "DNVP",        "name": "NFP",  "seats": Math.round(Q.dnvp_r*2.5) },
+    { "id": "nsdap","legend": "NSDAP",       "name": "NFP",  "seats": Math.round(Q.nsdap_r*2.5) },
 ]);
 
 var rm = (Q.reform_member !== undefined) ? Q.reform_member : 18.2;
 var cm = (Q.center_member !== undefined) ? Q.center_member : 27.3;
 var om = (Q.og_member     !== undefined) ? Q.og_member     : 54.5;
 
-var memberdata = [
+window._reichstagData = data;
+window._memberData = [
     { "id": "og",          "legend": "Old Guard",  "seats": Math.round(om*0.11) },
     { "id": "membercenter","legend": "Center",     "seats": Math.round(cm*0.11) },
     { "id": "reform",      "legend": "Reformists", "seats": Math.round(rm*0.11) },
 ];
+!}
+on-display:{!
+setTimeout(function() {
+    var el1 = document.getElementById('reichstagstatus');
+    var el2 = document.getElementById('membershipstatus');
+    if (!el1 || !el2 || !d3 || !d3.parliament) return;
 
-if (window && d3) {
     var width = document.getElementById('qualities').offsetWidth - 20;
     var height = Math.round(width / 2);
 
-    document.getElementById("reichstagstatus").setAttribute('width', width);
-    document.getElementById("reichstagstatus").setAttribute('height', height);
-    document.getElementById("membershipstatus").setAttribute('width', width);
-    document.getElementById("membershipstatus").setAttribute('height', height);
+    el1.setAttribute('width', width);
+    el1.setAttribute('height', height);
+    el2.setAttribute('width', width);
+    el2.setAttribute('height', height);
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstagstatus").datum(data).call(parliament);
+    d3.select('#reichstagstatus').datum(window._reichstagData).call(parliament);
 
     var parliament2 = d3.parliament();
     parliament2.width(width).height(height).innerRadiusCoef(0.4);
     parliament2.enter.fromCenter(true).smallToBig(true);
     parliament2.exit.toCenter(false).bigToSmall(true);
-    d3.select("#membershipstatus").datum(memberdata).call(parliament2);
-}
+    d3.select('#membershipstatus').datum(window._memberData).call(parliament2);
+}, 150);
 !}
-
 
 = Constitutional Bodies
 
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfĆ¼lfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div> 
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div>
 
 {!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
