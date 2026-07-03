@@ -1,7 +1,7 @@
 title: Dahnal Kronas
 is-pinned-card: true 
 tags: advisor, centrist
-card-image: img/Kronas.jpeg
+card-image: img/kronas.jpeg
 new-page: true
 view-if: breitscheid_advisor = 1
 
