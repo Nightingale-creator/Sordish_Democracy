@@ -1,9 +1,202 @@
 title: Status
 new-page: true
 is-special: true
+on-arrival: {!
+if (Q.unemployed) {
+    Q.unemployed_2 = Q.unemployed.toFixed(1);
+}
+if (Q.inflation) {
+    Q.inflation_2 = Q.inflation.toFixed(1);
+}
+Q.economic_growth_2 = '0';
+if (Q.economic_growth) {
+    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
+}
+!}
+
+= Status
+
+[+ month : month +] [+ year +]
+
+Resources available: [+ resources +]
+
+PFJP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: PFJP majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+
+[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+
+[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+
+Internal dissent: [+ dissent_percent : dissent +]
+
+= Government
+
+President: [? if pres_party = "PFJP" : [+ z_party_leader +]?]  [? if pres_party = "USP" : [+ president +] ?] ([+ pres_party +])
+
+GNA composition:
+
+# 1928: 30, 1950: 25, 1952: 22
+PFJP: [+ spd_r +]%
+[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+# 1928: 15, 1950: 15, 1952: 
+USP: [+ z_r +]%
+# 1928: 10, 1950: 13
+[+ cps_name +]: [+ kpd_r +]%
+# 1928: 9, 1950: 5
+WPB: [+ dvp_r +]%
+# 1928: 14, 1950: 7
+NFP: [+ dnvp_r +]%
+# 1928: 3, 1950: 18
+SLP: [+ ddp_r +]%
+# 1928: 9, 1950: 10
+Independents: [+ other_r +]%
+
+[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+
+Next election: [+ next_election_month : month +] [+ next_election_year +]
+
+= Economics
+
+Inflation: [+ inflation_2 +]%
+
+[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+
+Economic growth: [+ economic_growth_2 +]%
+
+
+@politics
+
+= Inter-party Relations
+
+
+  USP: [+ usp_relation : relationships +]
+
+  WPB: [+ wpb_relation : relationships +]
+
+ [+ cps_name +]: [+ cps_relation : relationships +]
+
+  NFP: [+ nfp_relation : relationships +]
+
+  SLP: [+ slp_relation : relationships +]
+
+= Party Leadership
+
+  USP: [+ usp_ideology +] ([+ usp_party_leader +])
+
+ [+ cps_name +]: [+ cps_ideology +] ([+ cps_party_leader +])
+
+  NFP: [+ nfp_ideology +] ([+ nfp_leader +])
+
+  WPB: [+ wpb_ideology +] ([+ wpb_leader +])
+
+  SLP: [+ slp_ideology +] ([+ slp_leader +])
+
+
+= Internal Factions of the PFJP
+
+
+Liberal strength: [+ lib_strength : strength +], dissent: [+ lib_dissent : dissent +]
+
+Social Democratic strength: [+ socdem_strength : strength +], dissent: [+ socdem_dissent : dissent +]
+
+Capitalist strength: [+ cap_strength : strength +], dissent: [+ cap_dissent : dissent +]
+
+[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+
+
+@paramilitaries
+on-arrival: {!
+if (Q.rb_strength) {
+    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+}
+if (Q.rfb_strength) {
+    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+}
+if (Q.sh_strength) {
+    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+}
+if (Q.sa_strength) {
+    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+}
+!}
+
+= Paramilitaries
+
+{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+
+Reichsbanner Militarization: [+ rb_militancy : militancy +]
+
+{!<span class="tooltip-text" title="The RFB (RotfrontkĆ¤mpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+
+RY Militarization: [+ rfb_militancy : militancy +]
+
+{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
+
+YS Militarization: [+ sh_militancy : militancy +]
+
+{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+
+SA Militarization: [+ sa_militancy : militancy +]
+
+= Official military/paramilitaries
+
+Reichswehr: [+ reichswehr_strength +] thousand troops.
+
+Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+
+ Police: [+ prussian_police_strength +] thousand members.
+
+Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+
+[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+
+@polls
+on-arrival: {!
+Q.pro_republic_disp = Math.round(Q.pro_republic);
+Q.nationalism_disp = Math.round(Q.nationalism);
+Q.socialism_disp = Math.round(Q.socialism);
+!}
+
+= Projected election results
+
+(if the election were to be held now):
+
+  PFJP: [+ spd_votes +]%
+
+[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+
+USP: [+ z_votes +]%
+
+[+ cps_name +]: [+ kpd_votes +]%
+
+WPB: [+ dvp_votes +]%
+
+NFP: [+ dnvp_votes +]%
+
+SLP: [+ ddp_votes +]%
+
+Others: [+ other_votes +]%
+
+
+**Detailed results for each demographic**
+
+Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, [+ cps_name +]: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+
+New Middle Class: PFJP: [+ new_middle_spd_display +]%, USP: [+ new_middle_z_display +]%, [+ cps_name +]: [+ new_middle_kpd_display +]%, SLP: [+ new_middle_ddp_display +]%, WPB: [+ new_middle_dvp_display +]%; NFP: [+ new_middle_dnvp_display +]%, IND: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+
+Old Middle Class: PFJP: [+ old_middle_spd_display +]%, USP: [+ old_middle_z_display +]%, [+ cps_name +] [+ old_middle_kpd_display +]%, SLP: [+ old_middle_ddp_display +]%, WPB: [+ old_middle_dvp_display +]%; NFP: [+ old_middle_dnvp_display +]%, IND: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+
+Rural: PFJP: [+ rural_spd_display +]%, USP: [+ rural_z_display +]%, [+ cps_name +]: [+ rural_kpd_display +]%, SLP: [+ rural_ddp_display +]%, WPB: [+ rural_dvp_display +]%; NFP: [+ rural_dnvp_display +]%, IND: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+
+Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]%, [+ cps_name +]: [+ unemployed_kpd_display +]%, SLP: [+ unemployed_ddp_display +]%, WPB: [+ unemployed_dvp_display +]%; NFP: [+ unemployed_dnvp_display +]%, PPS: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+
+Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, [+ cps_name +]: [+ catholics_kpd_display +]%, SLP: [+ catholics_ddp_display +]%, WPB: [+ catholics_dvp_display +]%; NFP: [+ catholics_dnvp_display +]%, IND: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+
+Support for the Reformism: [+ pro_republic_disp +]%
+
+@government
 on-arrival:{! 
 data = [
-
     {
         "id": "kpd",
         "legend": "KPD",
@@ -100,205 +293,8 @@ if (window && d3) {
 
 = Constitutional Bodies
 
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfülfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div> 
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">[? if pres_party == "PFJP" and z_party_leader == "Kronas": <img src="img/kronas.jpeg" style="width: 40%; height: 200px;"> ?] [? if pres_party == "PFJP" and z_party_leader == "Suheil": <img src="img/PfĆ¼lfAntonie.jpg" style="width: 40%; height: 200px;"> ?][? if pres_party == "PFJP" and z_party_leader = "Ricter": <img src="img/ricter.jpg" style="width: 40%; height: 200px;"> ?]</div> 
 
 {!<svg id="reichstagstatus" style="display:block;"></svg>!}
 
 {!<svg id="membershipstatus" style="display:block;"></svg>!}
-
-# = Public Opinion
-
-@politics
-
-= Inter-party Relations
-
-
-  USP: [+ usp_relation : relationships +]
-
-  WPB: [+ wpb_relation : relationships +]
-
- [+ cps_name +]: [+ cps_relation : relationships +]
-
-  NFP: [+ nfp_relation : relationships +]
-
-  SLP: [+ slp_relation : relationships +]
-
-= Party Leadership
-
-  USP: [+ usp_ideology +] ([+ usp_party_leader +])
-
- [+ cps_name +]: [+ cps_ideology +] ([+ cps_party_leader +])
-
-  NFP: [+ nfp_ideology +] ([+ nfp_leader +])
-
-  WPB: [+ wpb_ideology +] ([+ wpb_leader +])
-
-  SLP: [+ slp_ideology +] ([+ slp_leader +])
-
-
-= Internal Factions of the PFJP
-
-
-Liberal strength: [+ lib_strength : strength +], dissent: [+ lib_dissent : dissent +]
-
-Social Democratic strength: [+ socdem_strength : strength +], dissent: [+ socdem_dissent : dissent +]
-
-Capitalist strength: [+ cap_strength : strength +], dissent: [+ cap_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
-
-@paramilitaries
-on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
-}
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
-}
-!}
-
-= Paramilitaries
-
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
-
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
-
-RY Militarization: [+ rfb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
-
-YS Militarization: [+ sh_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-
-SA Militarization: [+ sa_militancy : militancy +]
-
-= Official military/paramilitaries
-
-Reichswehr: [+ reichswehr_strength +] thousand troops.
-
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
-
- Police: [+ prussian_police_strength +] thousand members.
-
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
-
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
-
-@polls
-on-arrival: {!
-Q.pro_republic_disp = Math.round(Q.pro_republic);
-Q.nationalism_disp = Math.round(Q.nationalism);
-Q.socialism_disp = Math.round(Q.socialism);
-!}
-
-= Projected election results
-
-(if the election were to be held now):
-
-  PFJP: [+ spd_votes +]%
-
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
-
-USP: [+ z_votes +]%
-
-[+ cps_name +]: [+ kpd_votes +]%
-
-WPB: [+ dvp_votes +]%
-
-NFP: [+ dnvp_votes +]%
-
-SLP: [+ ddp_votes +]%
-
-Others: [+ other_votes +]%
-
-
-**Detailed results for each demographic**
-
-Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, [+ cps_name +]: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
-
-New Middle Class: PFJP: [+ new_middle_spd_display +]%, USP: [+ new_middle_z_display +]%, [+ cps_name +]: [+ new_middle_kpd_display +]%, SLP: [+ new_middle_ddp_display +]%, WPB: [+ new_middle_dvp_display +]%; NFP: [+ new_middle_dnvp_display +]%, IND: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
-
-Old Middle Class: PFJP: [+ old_middle_spd_display +]%, USP: [+ old_middle_z_display +]%, [+ cps_name +] [+ old_middle_kpd_display +]%, SLP: [+ old_middle_ddp_display +]%, WPB: [+ old_middle_dvp_display +]%; NFP: [+ old_middle_dnvp_display +]%, IND: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
-
-Rural: PFJP: [+ rural_spd_display +]%, USP: [+ rural_z_display +]%, [+ cps_name +]: [+ rural_kpd_display +]%, SLP: [+ rural_ddp_display +]%, WPB: [+ rural_dvp_display +]%; NFP: [+ rural_dnvp_display +]%, IND: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
-
-Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]%, [+ cps_name +]: [+ unemployed_kpd_display +]%, SLP: [+ unemployed_ddp_display +]%, WPB: [+ unemployed_dvp_display +]%; NFP: [+ unemployed_dnvp_display +]%, PPS: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
-
-Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, [+ cps_name +]: [+ catholics_kpd_display +]%, SLP: [+ catholics_ddp_display +]%, WPB: [+ catholics_dvp_display +]%; NFP: [+ catholics_dnvp_display +]%, IND: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
-
-Support for the Reformism: [+ pro_republic_disp +]%
-
-@government
-on-arrival: {!
-if (Q.unemployed) {
-    Q.unemployed_2 = Q.unemployed.toFixed(1);
-}
-if (Q.inflation) {
-    Q.inflation_2 = Q.inflation.toFixed(1);
-}
-Q.economic_growth_2 = '0';
-if (Q.economic_growth) {
-    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
-}
-!}
-
-= Status
-
-[+ month : month +] [+ year +]
-
-Resources available: [+ resources +]
-
-PFJP position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: PFJP majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
-
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
-
-Internal dissent: [+ dissent_percent : dissent +]
-
-= Government
-
-President: [? if pres_party = "PFJP" : [+ z_party_leader +]?]  [? if pres_party = "USP" : [+ president +] ?] ([+ pres_party +])
-
-
-GNA composition:
-
-# 1928: 30, 1950: 25, 1952: 22
-PFJP: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1950: 15, 1952: 
-USP: [+ z_r +]%
-# 1928: 10, 1950: 13
-[+ cps_name +]: [+ kpd_r +]%
-# 1928: 9, 1950: 5
-WPB: [+ dvp_r +]%
-# 1928: 14, 1950: 7
-NFP: [+ dnvp_r +]%
-# 1928: 3, 1950: 18
-SLP: [+ ddp_r +]%
-# 1928: 9, 1950: 10
-Independents: [+ other_r +]%
-
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
-
-Next election: [+ next_election_month : month +] [+ next_election_year +]
-
-= Economics
-
-Inflation: [+ inflation_2 +]%
-
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
-
-Economic growth: [+ economic_growth_2 +]%
-
