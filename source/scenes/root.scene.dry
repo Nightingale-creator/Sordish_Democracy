@@ -633,7 +633,7 @@ Before starting i would like to give credit to Autumn Chen and the Creators of S
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 2;
+on-arrival: difficulty = -1; resources = 3; dues = 2; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 3;
 go-to: 1928_main
 
 @1928_hard

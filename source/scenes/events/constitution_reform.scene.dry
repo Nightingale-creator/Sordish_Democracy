@@ -18,17 +18,17 @@ We will now decide our Amendments for the constitution. We have already agreed t
 @constitute_menu
 
 - @threshold: Reduce the electoral threshold to 5%.
-- @nothreshold: Remove the amendment from the threshold.
+- @nothreshold: Remove the amendment from the threshold.(No Reform)
 - @term: Have the number of terms a president can serve be limited to 3.
-- @noterm: Have the President serve unlimited terms.
+- @noterm: Have the President serve unlimited terms.(No Reform)
 - @minister: Have the appointing of ministers require a confidence vote.
-- @nominister: Ministers require no confidence votes
+- @nominister: Ministers require no confidence votes(No Reform)
 - @decree: Have decrees require an enabling act.
-- @nodecree: Keep Decrees as is.
+- @nodecree: Keep Decrees as is.(No Reform)
 - @moh: Remove the Member of Honour position.
-- @nomoh: Keep the Member of Honour status.
+- @nomoh: Keep the Member of Honour status.(No Reform)
 - @impeach: Have the impeachment of the President require both the Supreme Court and Assembly 
-- @noimpeach: Keep the current of law of impeachment only requiring the Supreme Court
+- @noimpeach: Keep the current of law of impeachment only requiring the Supreme Court(No Reform)
 - @return: Return...
 
 @threshold
