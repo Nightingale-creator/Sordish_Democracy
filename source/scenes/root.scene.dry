@@ -66,6 +66,9 @@ Q.old_demographics = 0;
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
+// og 
+Q.og_corruption = 15;
+
 // party resources
 Q.resources = 2;
 // party dues
