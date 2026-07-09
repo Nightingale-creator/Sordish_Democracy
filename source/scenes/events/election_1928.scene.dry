@@ -333,7 +333,6 @@ Could we really form a coalition that included both the [+ cps_name +] ? It seem
 The military might attempt a coup, if such a coalition were formed.
 
 - @popular_front_2: Form the Popular Front!
-- @great_popular_front: Form the Popular Front!
 
 @popular_front_2
 go-to: popular_front_success
