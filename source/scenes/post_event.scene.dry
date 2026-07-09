@@ -334,11 +334,6 @@ if (Q.month_actions >= 1) {
         Q.sh_strength += 100/12;
     } else if (Q.year == 1951) {
         Q.catholics_z += 2/12;
-        Q.rural_dvp -= 8/12;
-        Q.old_middle_dvp -= 8/12;
-        Q.new_middle_dvp -= 8/12;
-        Q.old_middle_ddp -= 8/12;
-        Q.new_middle_ddp -= 8/12;
         Q.sa_strength += 50/12;
         Q.sh_strength += 50/12;
         Q.sa_militancy += 0.1/12;
@@ -347,8 +342,8 @@ if (Q.month_actions >= 1) {
         Q.rural_dnvp += 9/12;
         // TODO: economic policies should reduce dnvp rurals
         if (!Q.works_program) {
-            Q.old_middle_dvp -= 6/12;
-            Q.new_middle_dvp -= 6/12;
+            Q.old_middle_dvp -= 0;
+            Q.new_middle_dvp -= 0;
             Q.rural_dvp -= 6/12;
             Q.workers -= 4/12;
             Q.unemployed_dnvp += 7/12;
@@ -383,7 +378,7 @@ if (Q.month_actions >= 1) {
             Q.workers -= 4/12;
             Q.rural_dnvp -= 4/12;
             Q.rural_dnvp += 8/12;
-            Q.new_middle_dnvp += 10/12;
+            Q.new_middle_dnvp += 0;
             Q.old_middle_dnvp += 10/12;
             Q.unemployed_dnvp += 8/12;
             Q.unemployed_kpd += 2/12;
