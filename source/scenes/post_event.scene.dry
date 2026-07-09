@@ -310,7 +310,7 @@ if (Q.month_actions >= 1) {
         Q.sh_strength += 100/12;
         Q.rural_dnvp += 15/12;
         Q.rural_dnvp += 0;
-        Q.unemployed_dnvp += 18/12;
+        Q.unemployed_dnvp += 0.5;
     } else if (Q.year == 1950) {
         Q.rural_dnvp += 0;
         Q.rural_dnvp += 15/12;
@@ -366,10 +366,10 @@ if (Q.month_actions >= 1) {
             Q.rural_dnvp += 0;
         }
     } else if (Q.year == 1952) {
-        Q.old_middle_other -= 7/12;
-        Q.rural_other -= 7/12;
-        Q.old_middle_dnvp += 7/12;
-        Q.rural_dnvp += 7/12;
+        Q.old_middle_other -= 1/12;
+        Q.rural_other -= 2/12;
+        Q.old_middle_dnvp += 2/12;
+        Q.rural_dnvp += 2/12;
         Q.unemployed_dnvp += 4/12;
         if (!Q.works_program) {
             Q.unemployed += 5/12;
