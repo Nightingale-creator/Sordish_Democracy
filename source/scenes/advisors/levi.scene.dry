@@ -11,22 +11,32 @@ Ricter is a veteran of the PFJP who is a prominent member of the Market Liberal/
 
 - @building_the_left
 - @kpd_cooperation
+- @arcasia
 - @root: Return to main
 
 @building_the_left
-title: Emergency Fundraising 
-subtitle: Push the SPD to the left.
+title: Increase Support for Reformism
+subtitle: Ricter can use his business connections for better propaganda.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 10; left_dissent -= 8; reformist_dissent += 3
+on-arrival: advisor_action_timer = 6; pro_republic += 3; cap_strength += 3
 
-We have increased the strength of the left faction with the SPD. This raised concern among the moderate reformists in the party.
+Frens Ricter has successfully improved support for a democratic republican Sordland.
 
 @kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Any cooperation between the parties requires compromise from the KPD as well as the SPD.
+title: Boost Reformism in the USP
+subtitle: This might help us in passing a reformed constitution.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 5; kpd_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
+on-arrival: advisor_action_timer += 6; usp_reform += 0.02
 
-Levi attempts to reach out to his former colleagues to dissuade the KPD from their current extreme Stalinist path. Some concessions are extracted.
+Ricter attempts to reach out to his colleagues in the business world to dissuade them from supporting the Sollist Wing in the USP. Some concessions are extracted
+
+@arcasia
+title: Improve relations with the West
+subtitle: We could perhaps gain something economically from this.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer += 6
+
+Using Connections with Arcasian Senators. Ricter is able to improve relations with the Western Bloc

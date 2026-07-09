@@ -5,7 +5,7 @@ tags: party_affairs
 view-if: rally_timer <= 0
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/protest.jpg
-go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not return_to_normalcy
+go-to: main_rally; sa_disrupt if sa_strength > 18000 and not sa_banned and not return_to_normalcy
 
 @sa_disrupt
 
@@ -82,7 +82,7 @@ Mass rallies are a common feature of  democratic life, especially in the lead-up
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_spd += 2*(1-dissent); new_middle_spd += 4*(1-dissent); old_middle_spd += 3*(1-dissent); lib_strength += 3; lib_dissent -=3
+on-arrival: workers_spd += 2*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); lib_strength += 3; lib_dissent -=3
 
 Our message of Freedom appeals to the middle class and gives hope to workers.The dawn of the torch of Liberty ignites passion in those listening.
 
@@ -92,7 +92,7 @@ on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfar
 The Social Democratic message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
-on-arrival: pro_republic += 3; workers_spd += 1; new_middle_spd += 2; old_middle_spd += 2
+on-arrival: pro_republic += 3; workers_spd += 1; new_middle_spd += 1; old_middle_spd += 1; usp_reform += 0.01
 
 Our speakers defend the republican system and advocate for it's Reform and rail against the monarchists and authoritarians who threaten it.
 
@@ -119,6 +119,6 @@ The WTB plan has become a popular rallying cry for our party. The workers are ea
 
 
 @local
-on-arrival: workers_spd += 2*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 1*(1-dissent);
+on-arrival: workers_spd += 2*(1-dissent); old_middle_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); unemployed_spd += 1*(1-dissent);
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
