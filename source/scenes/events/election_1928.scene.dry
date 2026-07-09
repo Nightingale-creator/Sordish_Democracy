@@ -324,7 +324,7 @@ There are some potential coalition arrangements.
 @popular_front_coalition
 title: A "Popular Front" coalition?
 subtitle: PFJP + WPB + [+ cps_name +] ([+ popular_front_coalition +]%)
-unavailable-subtitle: PFJP + WPB + [+ cps_name +] ([+ popular_front_coalition +]%) - [? if ((cps_relation < 60 and cps_party_leader == "Stahler") or (kpd_relation < 50 and cps_party_leader == "Lackber")): We do not have good enough relations with the [+ cps_name +]. ?][? if (wpb_relation < 45) ?]: we do not have good enough relations with the WPB?]
+unavailable-subtitle: PFJP + WPB + [+ cps_name +] ([+ popular_front_coalition +]%) - [? if ((cps_relation < 60 and cps_party_leader == "Stahler") or (kpd_relation < 50 and cps_party_leader == "Lackber")): We do not have good enough relations with the [+ cps_name +]. ?][? if (wpb_relation < 45): we do not have good enough relations with the WPB ?]
 view-if: popular_front_coalition >= 50 and spd_r >= 50
 choose-if: ((cps_relation >= 60 and cps_party_leader == "Stahler") or (cps_relation >= 50 and cps_party_leader == "Lackber")) and ((wpb_relation >= 45))
 
