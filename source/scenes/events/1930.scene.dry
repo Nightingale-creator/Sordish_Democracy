@@ -2,7 +2,7 @@ title: 1950
 subtitle: A new year 
 audio: clear shuffle music/SuzerainOSTMainTheme.mp3 music/Suzerain_RiziaOSTByThePeople.mp3 music/Summary.mp3 music/ Suzerain_RiziaOSTMainTheme.mp3
 on-arrival: {!
-// increase NSDAP vote share 
+// increase dnvp vote share 
 // historical: -1.4
 Q.economic_growth -= 1;
 // moved demographic changes to post_event
@@ -12,4 +12,4 @@ view-if: year = 1950 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The NSDAP seems to be strengthening in local elections. All very worrisome trends.
+A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The dnvp seems to be strengthening in local elections. All very worrisome trends.
