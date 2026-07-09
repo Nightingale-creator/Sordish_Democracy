@@ -12,7 +12,7 @@ face-image: img/hindenburg_election.jpg
 
 @pres_election
 
-The presidential election is coming up soon. [? if spd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
+The Presidential election is coming up soon. [? if spd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
 [? if sapd_formed: The SAPD, our former leftists, are supporting Thälmann of the KPD, and will likely share an endorsement with the Communists. ?]
 
 # if hitler is deported, who would nsdap run? Duesterberg? or Goering?
@@ -178,7 +178,7 @@ Q.thalmann_votes = 0;
 // initial phase:
 Q.hitler_votes += Q.nsdap_normalized;
 Q.hindenburg_votes += Q.other_normalized;
-Q.hindenburg_votes += (Q.dnvp_normalized*0.5);
+Q.hindenburg_votes += (Q.dnvp_normalized*0.1);
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.spd_normalized;
@@ -218,8 +218,8 @@ if (Q.braun_campaign) {
     Q.thalmann_votes += Q.kpd_normalized;
 }
 if (Q.hitler_support_hindenburg) {
-    Q.hitler_votes -= Q.nsdap_normalized;
-    Q.hindenburg_votes += Q.nsdap_normalized;
+    Q.hitler_votes -= 0;
+    Q.hindenburg_votes += 0;
 }
 
 if (Q.hindenburg_to_braun_bonus) {
@@ -262,8 +262,6 @@ go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_ma
 Results:
 
 Alphonso - [+ hindenburg_votes_disp +]%
-
-[+ nsdap_candidate +] - [+ hitler_votes_disp +]%
 
 [? if kpd_support_braun == 0 : Stahler - [+ thalmann_votes_disp +]% ?]
 
