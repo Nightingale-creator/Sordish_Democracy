@@ -3,7 +3,7 @@ subtitle: A new year
 on-arrival: {!
 // increase dnvp vote share 
 // TODO: if a public works program has started, unemployment is not so bad.
-Q.unemployed += 6;
+Q.unemployed += 0;
 Q.inflation -= 5;
 // historical: -7.7%
 // leave some economic decline for the banking crisis event
