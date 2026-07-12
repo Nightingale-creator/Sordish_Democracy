@@ -62,9 +62,9 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 
 @braun_campaign
 
-- @convince_z: Convince the Center Party.
+- @convince_z: Convince the USP.
 - @convince_kpd: Convince the Communists.
-- @convince_liberals: Convince the remaining liberals, wherever they are.
+- @convince_liberals: Convince the WPB.
 - @final_election: The final vote...
 
 @convince_z
@@ -123,7 +123,7 @@ The KPD is supporting their own candidate, Ernst Thälmann. [? if kpd_relation >
 - @braun_campaign: Forget about the KPD.
 
 @kpd_resources
-view-if: kpd_relation >= 50 and not historical_mode
+view-if: cps_relation >= 50 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
@@ -152,7 +152,7 @@ The liberal vote ([+ ddp_name +] and DVP) has been falling over time, so they wi
 on-arrival: dvp_support_braun = 1
 go-to: braun_campaign
 
-Thanks to our good relations, the DVP has promised to support Braun in the election.
+Thanks to our good relations, the WPB has promised to support Braun in the election.
 
 @convince_liberals_fail
 on-arrival: dvp_support_braun = 1
