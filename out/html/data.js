@@ -1,21 +1,21 @@
 const tooltipList = [{
     searchString: "PFJP",
-    explanationText: "<img src=img/pfjp.png> The People's Freedom and Justice Party,our Liberal Democratic Party."
+    explanationText: "<img src=img/pfjp.png> The People's Freedom and Justice Party, our Reformist Democratic Party."
 },
   {
     searchString: "SLP",
-    explanationText: "<img src=img/slp.png> The Sordish Laissez-Faire Party,the Party of industrial interests."
+    explanationText: "<img src=img/slp.png> The Sordish Laissez-Faire Party, the Party of industrial interests."
 },
 
                
   {
     searchString: "WPB",
-    explanationText: "<img src=img/wpb.png> The Workers' Party of Bludia,the Party of Bludish People."
+    explanationText: "<img src=img/wpb.png> The Workers' Party of Bludia, the Party of Bludish People."
 },      
  
   {
     searchString: "NFP",
-    explanationText: "<img src=img/nfp.png> The National Front Party,The most despicable Party of Racist interests."
+    explanationText: "<img src=img/nfp.png> The National Front Party, the most despicable Party of Racist interests."
 },              
 
        
@@ -31,8 +31,8 @@ const tooltipList = [{
       
   {
     searchString: "USP",
-    explanationText: "<img src=img/usp.png> The United Sordland Party,the big-tent Establishment Party of the Republic."
-},               
+    explanationText: "<img src=img/usp.png> The United Sordland Party, the big-tent Establishment Party of the Republic."
+},                
                      
     ];
 
