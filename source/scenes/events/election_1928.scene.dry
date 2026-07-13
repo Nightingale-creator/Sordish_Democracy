@@ -90,8 +90,8 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // The largest party can only be the dnvp or the SPD.
 Q.largest_party = 'SPD';
-if (Q.dnvp_r >= Q.spd_r && Q.dnvp_r >= Q.kpd_r) {
-    Q.largest_party = 'dnvp';
+if (Q.z_r >= Q.spd_r && Q.dnvp_r >= Q.kpd_r) {
+    Q.largest_party = 'USP';
 }
 
 if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.dnvp_r) {
@@ -657,7 +657,7 @@ go-to: hitler_chancellor
 
 
 @hitler_chancellor
-on-arrival: chancellor = "Hitler"; chancellor_party = "dnvp"
+on-arrival: chancellor = "Hitler"; chancellor_party = "NFP"
 
 There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "dnvp" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
@@ -820,11 +820,11 @@ Q.new_middle_spd -= 3;
 Q.old_middle_spd -= 3;
 Q.rural_spd -= 3;
 Q.catholics_spd -= 3;
-Q.workers_dnvp += 5;
+Q.workers_dnvp += 2;
 Q.old_middle_dnvp += 3;
 Q.new_middle_dnvp += 3;
 Q.rural_dnvp += 3;
-Q.unemployed_dnvp += 5;
+Q.unemployed_dnvp += 3;
 if (Q.pro_republic < 45 && Q.pro_republic >= 38) {
     Q.workers_spd -= 6;
 }

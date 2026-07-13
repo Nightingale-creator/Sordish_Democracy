@@ -632,9 +632,9 @@ go-to: election_end
 
 
 @hitler_victory
-on-arrival: chancellor = "Hitler"; chancellor_party = "dnvp"
+on-arrival: chancellor = "Hitler"; chancellor_party = "NFP"
 
-With [+ dnvp_candidate +]'s victory, the Nazis waste no time in consolidating power. [? if president = "Göring": His first act is to depose the current chancellor and appoint Hitler as chancellor, first undoing his deportation. ?][? if president = "Hitler": His first act is to depose the current chancellor and appoint himself chancellor, using his stormtroopers to attack any opposition. ?]
+With [+ nsdap_candidate +]'s victory, the Nazis waste no time in consolidating power. [? if president = "Göring": His first act is to depose the current chancellor and appoint Hitler as chancellor, first undoing his deportation. ?][? if president = "Hitler": His first act is to depose the current chancellor and appoint himself chancellor, using his stormtroopers to attack any opposition. ?]
 
 - @hitler_takes_power: What next?
 - @hitler_constitutional: This is unconstitutional!
