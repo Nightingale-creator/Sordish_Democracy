@@ -210,7 +210,7 @@ data = data.concat([
     { "id": "dvp",  "legend": "DVP",         "name": "WPB",  "seats": Math.round(Q.dvp_r*2.5) },
     { "id": "other","legend": "Other",       "name": "Independents", "seats": Math.round(Q.other_r*2.5) },
     { "id": "dnvp", "legend": "DNVP",        "name": "NFP",  "seats": Math.round(Q.dnvp_r*2.5) },
-    { "id": "dnvp","legend": "dnvp",       "name": "NFP",  "seats": Math.round(Q.dnvp_r*2.5) },
+    { "id": "nsdap","legend": "NSDAP",       "name": "NFP",  "seats": Math.round(Q.dnvp_r*2.5) },
 ]);
 
 var rm = (Q.reform_member !== undefined) ? Q.reform_member : 18.2;
