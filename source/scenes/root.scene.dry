@@ -223,7 +223,7 @@ Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.kpd_banned = 0;
-Q.dnvp_banned = 0;
+Q.nsdap_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -315,7 +315,7 @@ Q.unemployed_z = 18;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 5;
 Q.unemployed_dnvp = 5;
-Q.unemployed_dnvp = 0;
+Q.unemployed_nsdap = 0;
 Q.unemployed_other = 10;
 
 Q.catholics_spd = 25;
@@ -324,7 +324,7 @@ Q.catholics_z = 20;
 Q.catholics_ddp = 0;
 Q.catholics_dvp = 45;
 Q.catholics_dnvp = 0;
-Q.catholics_dnvp = 0;
+Q.catholics_nsdap = 0;
 Q.catholics_other = 0;
 
 
@@ -340,7 +340,7 @@ Q.z_r = 56;
 Q.ddp_r = 0;
 Q.dvp_r = 0;
 Q.dnvp_r = 0;
-Q.dnvp_r = 0;
+Q.nsdap_r = 0;
 Q.other_r = 3;
 
 // diff from prev
@@ -350,7 +350,7 @@ Q.old_z_r = 17;
 Q.old_ddp_r = 6;
 Q.old_dvp_r = 10;
 Q.old_dnvp_r = 20;
-Q.old_dnvp_r = 3;
+Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
