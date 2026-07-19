@@ -16,7 +16,7 @@ The Supreme Court consists of three factions. The Sollist Old Guard, the Moderat
 go-to: sc_success if pro_republic >= 70; sc_fail if pro_republic < 70
 
 @sc_success
-on-arrival: electoral_threshold = 5 if threshold_reform = 1; sc_passed = 1; spd_new_middle += 5; workers_spd += 3; old_middle_spd += 3; usp_reform += 0.02; 
+on-arrival: electoral_threshold = 5 if threshold_reform = 1; sc_passed = 1; spd_new_middle += 5; workers_spd += 3; old_middle_spd += 3; usp_reform += 0.02; og_corruption -= 1;
 
 A triumphant victory for Sordish Democracy has been achieved. The long awaited dream of Artor S. Wisci' Democratic Republic has been achieved. The torch of Liberty Shines Brighter than ever, A Morgna Had Coren.
 

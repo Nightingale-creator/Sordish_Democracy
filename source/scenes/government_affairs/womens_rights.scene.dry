@@ -25,8 +25,8 @@ For better or for worse, the Reformists stand virtually alone in supporting incr
 
 
 @wlabill
-choose-if: og_corruption <= 9
-subtitle: [? if og_corruption <= 9: We have promised to pass laws regarding gender equality. Now we can. ?] [? if og_corruption > 9: The establishment is too corrupt. Therefore it is useless to pass it now ?]
+choose-if: og_corruption <= 7
+subtitle: [? if og_corruption <= 7: We have promised to pass laws regarding gender equality. Now we can. ?] [? if og_corruption > 9: The establishment is too corrupt. Therefore it is useless to pass it now ?]
 on-arrival: 
 
 
