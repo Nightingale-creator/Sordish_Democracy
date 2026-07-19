@@ -56,7 +56,7 @@ We have increased welfare spending on women and children. [? if welfare >= 1 and
 
 
 @liberalize
-view-if: wla_passed = 1;
+view-if: wla_passed = 1
 max-visits: 1
 subtitle: [? if progressive_coalition < 50 : This is unlikely to succeed; we do not have majority support. ?]
 go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if progressive_coalition >= 50
