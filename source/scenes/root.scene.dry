@@ -68,6 +68,10 @@ Q.use_decimals = 0;
 
 // og 
 Q.og_corruption = 15;
+Q.wla_bill = 0;
+Q.wla_passed = 0;
+Q.mra_bill = 0;
+Q.mra_passed = 0;
 
 // party resources
 Q.resources = 2;
