@@ -1,0 +1,21 @@
+title: Funding for Ministries
+subtitle: the budget is to be decided now
+max-vists: 1
+view-if: year = 1951 and month = 5 and spd_in_government = 1
+tags: event
+
+The previous government of Sordland has ignored education and prioritized military spending. What we do now is up to our best judgement. Economic Growth is also affected by our decisions here.
+
+- @milplus: Increase Funding for the Military.
+- @milnorm: Maintain Funding for the Military.
+- @milless: Reduce Funding for the Military.
+- @edplus: Increase Funding for Education.
+- @ednorm: Maintain Funding for Education.
+- @edless: Reduce Funding for Education.
+- @justmore: Increase Funding for Law and Order.
+- @justnorm: Maintain Funding for Law and Order.
+- @justless: Reduce Funding for Law and Order.
+- @healthmore: Increase Funding for Healthcare.
+- @healthnorm: Maintain Funding for Healthcare.
+- @healthless: Reduce Funding for Healthcare.
+
