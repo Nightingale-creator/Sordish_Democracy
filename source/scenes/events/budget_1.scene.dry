@@ -142,6 +142,6 @@ go-to: healthfund
 go-to: budmon
 
 @buddone
-on-arrival: budget -= 3 if military_funding = 1; budget += 3 if military_funding = -1; budget -= 2 if education_funding = 1; budget += 2 if education_funding = -1; budget -= 2 if justice_funding = 1: budget += 2 if justice_funding = -1; budget += 1 if health_funding = -1; budget -= 1 if health_funding = 1
+on-arrival: budget -= 3 if military_funding = 1; budget += 3 if military_funding = -1; budget -= 2 if education_funding = 1; budget += 2 if education_funding = -1; budget -= 2 if justice_funding = 1; budget += 2 if justice_funding = -1; budget += 1 if health_funding = -1; budget -= 1 if health_funding = 1
 
 We have finished deciding our budget for each ministry.
