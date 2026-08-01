@@ -1,6 +1,5 @@
 title: Funding for Ministries
-subtitle: the budget is to be decided now
-max-vists: 1
+subtitle: the budget is to be decided now...
 view-if: year = 1951 and month = 5 and spd_in_government = 1
 tags: event
 go-to: budmon
