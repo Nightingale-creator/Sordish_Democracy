@@ -3,19 +3,145 @@ subtitle: the budget is to be decided now
 max-vists: 1
 view-if: year = 1951 and month = 5 and spd_in_government = 1
 tags: event
+go-to: budmon
 
-The previous government of Sordland has ignored education and prioritized military spending. What we do now is up to our best judgement. Economic Growth is also affected by our decisions here.
+@budmon 
+
+The previous government of Sordland has ignored education and prioritized military spending. What we do now is up to our best judgement. Economic Growth is also affected by our decisions here(do note that the budget changes mentioned here are for your CURRENT budget in the other window).
+
+- @milfund: Change Funding for the Military.
+- @edfund: Change Funding for Education.
+- @justfund: Change Funding for Law and Order.
+- @healthfund: Change Funding for Healthcare.
+- @buddone: We have done enough.
+
+
+@milfund
+
+We have decided to change funding for the Military.
 
 - @milplus: Increase Funding for the Military.
 - @milnorm: Maintain Funding for the Military.
 - @milless: Reduce Funding for the Military.
+- @back1: Return...
+
+@milplus
+subtitle: -3 budget
+view-if: military_funding = 0
+on-arrival: military_funding = 1
+go-to: milfund
+
+@milnorm
+subtitle: No change to budget
+view-if: military_funding = 1 or military_funding = -1
+on-arrival: military_funding = 0
+go-to: milfund
+
+@milless
+subtitle: +3 budget
+view-if: military_funding = 0 or military_funding = 1
+on-arrival: military_funding = -1
+go-to: milfund
+
+@back1
+go-to: budmon
+
+
+@edfund
+
+We have decided to change funding for Education.
+
 - @edplus: Increase Funding for Education.
 - @ednorm: Maintain Funding for Education.
 - @edless: Reduce Funding for Education.
-- @justmore: Increase Funding for Law and Order.
+- @back2: Return...
+
+@edplus
+subtitle: -2 budget
+view-if: education_funding = 0
+on-arrival: education_funding = 1
+go-to: edfund
+
+@ednorm
+subtitle: No change to budget
+view-if: education_funding = 1 or education_funding = -1
+on-arrival: education_funding = 0
+go-to: edfund
+
+@edless
+subtitle: +2 budget
+view-if: education_funding = 0 or education_funding = 1
+on-arrival: education_funding = -1
+go-to: edfund
+
+@back2
+go-to: budmon
+
+
+
+@justfund
+
+We have decided to change funding for Law and Order.
+
+- @justplus: Increase Funding for Law and Order.
 - @justnorm: Maintain Funding for Law and Order.
 - @justless: Reduce Funding for Law and Order.
-- @healthmore: Increase Funding for Healthcare.
-- @healthnorm: Maintain Funding for Healthcare.
-- @healthless: Reduce Funding for Healthcare.
+- @back3: Return...
 
+@justplus
+subtitle: -2 budget
+view-if: interior_funding = 0
+on-arrival: interior_funding = 1
+go-to: justfund
+
+@justnorm
+subtitle: No change to budget
+view-if: education_funding = 1 or education_funding = -1
+on-arrival: interior_funding = 0
+go-to: justfund
+
+@justless
+subtitle: +2 budget
+view-if: education_funding = 0 or education_funding = 1
+on-arrival: interior_funding = -1
+go-to: justfund
+
+@back3
+go-to: budmon
+
+
+
+@healthfund
+
+We have decided to change funding for Healthcare.
+
+- @healthplus: Increase Funding for Healthcare.
+- @healthnorm: Maintain Funding for Healthcare.
+- @healthless: Reduce Funding for the Healthcare.
+- @back4: Return...
+
+@healthplus
+subtitle: -1 budget
+view-if: health_funding = 0
+on-arrival: health_funding = 1
+go-to: healthfund
+
+@healthnorm
+subtitle: No change to budget
+view-if: health_funding = 1 or health_funding = -1
+on-arrival: health_funding = 0
+go-to: healthfund
+
+@healthless
+subtitle: +1 budget
+view-if: health_funding = 0 or health_funding = 1
+on-arrival: health_funding = -1
+go-to: healthfund
+
+@back4
+go-to: budmon
+
+@buddone
+on-arrival: budget -= 3 if military_funding = 1; budget += 3 if military_funding = -1; budget -= 2 if education_funding = 1; budget += 2 if education_funding = -1; budget -= 2 if justice_funding = 1: budget += 2 if justice_funding = -1; budget += 1 if health_funding = -1; budget -= 1 if health_funding = 1
+
+We have finished deciding our budget for each ministry.
