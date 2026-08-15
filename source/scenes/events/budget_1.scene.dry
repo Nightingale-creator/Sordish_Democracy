@@ -2,6 +2,7 @@ title: Funding for Ministries
 subtitle: the budget is to be decided now...
 view-if: year = 1951 and month = 5 and spd_in_government = 1
 tags: event
+max-visits: 1
 go-to: budmon
 
 @budmon 
