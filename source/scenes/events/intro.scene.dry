@@ -1,1 +1,10 @@
+title: Introduction to the Game
+subtitle: You should uh read this.
+view-if: year = 1949 and month = 2
+new-page: true
+max-visits: 1
+on-arrival: {! colourList[0].style = "color: #D5AC27; font-weight: bold;" !}
 
+= Blah
+
+continue 
