@@ -27,7 +27,7 @@ We have decided to change funding for the Military.
 
 @milplus
 subtitle: -3 budget
-view-if: military_funding = 0
+view-if: military_funding = 0 or military_funding = -1
 on-arrival: military_funding = 1
 go-to: milfund
 
@@ -58,7 +58,7 @@ We have decided to change funding for Education.
 
 @edplus
 subtitle: -2 budget
-view-if: education_funding = 0
+view-if: education_funding = 0 or education_funding = -1
 on-arrival: education_funding = 1
 go-to: edfund
 
@@ -90,7 +90,7 @@ We have decided to change funding for Law and Order.
 
 @justplus
 subtitle: -2 budget
-view-if: interior_funding = 0
+view-if: interior_funding = 0 or interior_funding = -1
 on-arrival: interior_funding = 1
 go-to: justfund
 
@@ -122,7 +122,7 @@ We have decided to change funding for Healthcare.
 
 @healthplus
 subtitle: -1 budget
-view-if: health_funding = 0
+view-if: health_funding = 0 or health_funding = -1
 on-arrival: health_funding = 1
 go-to: healthfund
 
